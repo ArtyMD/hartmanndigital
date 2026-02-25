@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hartmann Digital | Premium Google Ads, Meta Ads & GTM Setup Agency</title>
+    <meta name="description"
+        content="Scale your business with expert Google Ads, Meta Ads, and comprehensive Google Tag Manager (GTM) setup. We drive targeted traffic and track every conversion accurately.">
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://hartmann-digital.com/">
+    <meta property="og:title" content="Hartmann Digital | Premium Performance Marketing">
+    <meta property="og:description" content="Elite Google Ads, Meta Ads & GTM Strategy for High-Growth Brands.">
+    <meta property="og:image" content="assets/images/hero.png">
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://hartmann-digital.com/">
+    <meta property="twitter:title" content="Hartmann Digital | Premium Performance Marketing">
+    <meta property="twitter:description" content="Elite Google Ads, Meta Ads & GTM Strategy for High-Growth Brands.">
+    <meta property="twitter:image" content="assets/images/hero.png">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="dark-theme">
+    <div class="background-effects">
+        <div class="glow-orb orb-1"></div>
+        <div class="glow-orb orb-2"></div>
+        <div class="glow-orb orb-3"></div>
+    </div>
+
+    <!-- Navigation -->
+    <header id="site-header" class="site-header">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <span class="logo-icon"><i class="fa-solid fa-chart-line"></i></span>
+                Hartmann<span class="gradient-text">Digital</span>
+            </a>
+
+            <nav id="main-nav" class="main-nav">
+                <ul class="nav-links">
+                    <li><a href="#hero" class="nav-link" data-i18n="nav_home">Home</a></li>
+                    <li><a href="#services" class="nav-link" data-i18n="nav_expertise">Expertise</a></li>
+                    <li><a href="#pricing" class="nav-link" data-i18n="nav_pricing">Pricing</a></li>
+                    <li><a href="#process" class="nav-link" data-i18n="nav_process">Process</a></li>
+                    <li><a href="#contact" class="nav-link" data-i18n="nav_contact">Contact</a></li>
+                </ul>
+                <div class="header-actions-mobile">
+                    <a href="#contact" class="btn btn-primary btn-glow" data-i18n="nav_cta">Get a Free Audit</a>
+                </div>
+            </nav>
+
+            <div class="header-actions">
+                <div class="lang-switcher">
+                    <button class="lang-btn" id="lang-btn">
+                        <i class="fa-solid fa-globe"></i> <span id="current-lang">EN</span> <i
+                            class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="lang-dropdown" id="lang-dropdown">
+                        <a href="#" data-lang="en">English</a>
+                        <a href="#" data-lang="ru">Русский</a>
+                        <a href="#" data-lang="ro">Română</a>
+                    </div>
+                </div>
+                <a href="#contact" id="nav-cta" class="btn btn-primary btn-glow" data-i18n="nav_cta">Get a Free
+                    Audit</a>
+            </div>
+
+            <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Toggle Menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="badge fade-in-up" style="animation-delay: 0.1s;" data-i18n="hero_badge">
+                        <span class="pulse-dot"></span> Elite Performance Marketing
+                    </div>
+                    <h1 id="hero-heading" class="hero-title fade-in-up" style="animation-delay: 0.2s;"
+                        data-i18n="hero_title">
+                        Turn Clicks Into <br />
+                        <span class="gradient-text">High-Value Clients.</span>
+                    </h1>
+                    <p class="hero-description fade-in-up" style="animation-delay: 0.3s;" data-i18n="hero_desc">
+                        We engineer scalable growth using data-driven <strong>Google Ads</strong>, high-converting
+                        <strong>Meta Ads</strong>, and flawless <strong>GTM & Analytics Setup</strong> so you track
+                        every dollar.
+                    </p>
+                    <div class="hero-actions fade-in-up" style="animation-delay: 0.4s;">
+                        <a href="#contact" id="hero-primary-cta" class="btn btn-primary btn-lg btn-glow"
+                            data-i18n="hero_cta_primary">
+                            Start Scaling Now <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                        <a href="#services" id="hero-secondary-cta" class="btn btn-outline btn-lg"
+                            data-i18n="hero_cta_secondary">
+                            Explore Services
+                        </a>
+                    </div>
+                    <div class="stats-row fade-in-up" style="animation-delay: 0.5s;">
+                        <div class="stat-item">
+                            <h3 class="stat-number">3.5x</h3>
+                            <p class="stat-label" data-i18n="stat_roas">Avg. ROAS</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3 class="stat-number">$10M+</h3>
+                            <p class="stat-label" data-i18n="stat_spend">Ad Spend Managed</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3 class="stat-number">100%</h3>
+                            <p class="stat-label" data-i18n="stat_accuracy">Data Accuracy</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-visual fade-in" style="animation-delay: 0.4s;">
+                    <div class="glass-card visual-wrapper">
+                        <img src="assets/images/hero.png" alt="Abstract 3D digital marketing analytics visualization"
+                            id="hero-image" class="floating-image">
+
+                        <!-- Floating UI Elements -->
+                        <div class="floating-badge badge-google">
+                            <i class="fa-brands fa-google"></i> <span data-i18n="badge_google">Google Partner</span>
+                        </div>
+                        <div class="floating-badge badge-meta">
+                            <i class="fa-brands fa-meta"></i> <span data-i18n="badge_meta">Meta Verified</span>
+                        </div>
+                        <div class="floating-badge badge-gtm">
+                            <i class="fa-solid fa-tags"></i> <span data-i18n="badge_gtm">GTM Certified</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services-section">
+            <div class="container">
+                <div class="section-header text-center fade-in-up">
+                    <h2 class="section-title" data-i18n="services_title">Our <span class="gradient-text">Core
+                            Expertise</span></h2>
+                    <p class="section-subtitle" data-i18n="services_subtitle">We don't do everything. We do three things
+                        with absolute mastery to drive exponential revenue growth.</p>
+                </div>
+
+                <div class="services-grid">
+                    <!-- Google Ads Card -->
+                    <div id="service-google" class="glass-card service-card fade-in-up" style="animation-delay: 0.1s;">
+                        <div class="service-icon icon-google">
+                            <i class="fa-brands fa-google"></i>
+                        </div>
+                        <h3 class="service-name" data-i18n="service_google_name">Google Ads</h3>
+                        <p class="service-desc" data-i18n="service_google_desc">Dominate search intent. We deploy
+                            search, shopping, and performance max campaigns that capture users exactly when they are
+                            ready to buy.</p>
+                        <ul class="service-features">
+                            <li><i class="fa-solid fa-check"></i> <span data-i18n="service_google_f1">Intent-based
+                                    Search Campaigns</span></li>
+                            <li><i class="fa-solid fa-check"></i> <span data-i18n="service_google_f2">Performance Max
+                                    Mastery</span></li>
+                            <li><i class="fa-solid fa-check"></i> <span data-i18n="service_google_f3">Advanced Bidding
+                                    Strategies</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Meta Ads Card -->
+                    <div id="service-meta" class="glass-card service-card fade-in-up" style="animation-delay: 0.2s;">
+                        <div class="service-icon icon-meta">
+                            <i class="fa-brands fa-meta"></i>
+                        </div>
+                        <h3 class="service-name" data-i18n="service_meta_name">Meta Ads</h3>
+                        <p class="service-desc" data-i18n="service_meta_desc">Stop the scroll and drive demand. From
+                            compelling creatives to advanced funnel retargeting, we acquire customers profitably on FB &
+                            IG.</p>
+                        <ul class="service-features">
+                            <li><i class="fa-solid fa-check"></i> <span data-i18n="service_meta_f1">High-converting
+                                    Creatives</span></li>
+                            <li><i class="fa-solid fa-check"></i> <span data-i18n="service_meta_f2">Full-Funnel
+                                    Retargeting</span></li>
+                            <li><i class="fa-solid fa-check"></i> <span data-i18n="service_meta_f3">Advantage+ Catalog
+                                    Ads</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- GTM & Tracking Card -->
+                    <div id="service-gtm" class="glass-card service-card fade-in-up" style="animation-delay: 0.3s;">
+                        <div class="service-icon icon-gtm">
+                            <i class="fa-solid fa-code-branch"></i>
+                        </div>
+                        <h3 class="service-name" data-i18n="service_gtm_name">GTM & Tracking</h3>
+                        <p class="service-desc" data-i18n="service_gtm_desc">Without proper tracking, you're flying
+                            blind. We implement server-side tracking, GTM, and GA4 to ensure 100% data integrity.</p>
+                        <ul class="service-features">
+                            <li><i class="fa-solid fa-check"></i> <span data-i18n="service_gtm_f1">GA4 & GTM Clean
+                                    Setup</span></li>
+                            <li><i class="fa-solid fa-check"></i> <span data-i18n="service_gtm_f2">Server-Side Tracking
+                                    via CAPI</span></li>
+                            <li><i class="fa-solid fa-check"></i> <span data-i18n="service_gtm_f3">Custom Conversion
+                                    Events</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dynamic Process Section -->
+        <section id="process" class="process-section">
+            <div class="container">
+                <div class="process-wrapper glass-card fade-in">
+                    <div class="process-content">
+                        <h2 class="section-title" data-i18n="process_title">The <span class="gradient-text">Hartmann
+                                Blueprint</span></h2>
+                        <p class="section-subtitle text-left" data-i18n="process_subtitle">How we turn your ad budget
+                            into a predictable revenue engine.</p>
+
+                        <div class="process-steps">
+                            <div class="process-step active" tabindex="0">
+                                <div class="step-number">01</div>
+                                <div class="step-details">
+                                    <h4 data-i18n="process_step1_title">Audit & Strategy</h4>
+                                    <p data-i18n="process_step1_desc">Deep dive into your existing accounts, identifying
+                                        wasted spend and scalable opportunities.</p>
+                                </div>
+                            </div>
+                            <div class="process-step" tabindex="0">
+                                <div class="step-number">02</div>
+                                <div class="step-details">
+                                    <h4 data-i18n="process_step2_title">Flawless Tracking (GTM/GA4)</h4>
+                                    <p data-i18n="process_step2_desc">Before spending a dime, we bulletproof your data
+                                        layer so algorithms learn faster.</p>
+                                </div>
+                            </div>
+                            <div class="process-step" tabindex="0">
+                                <div class="step-number">03</div>
+                                <div class="step-details">
+                                    <h4 data-i18n="process_step3_title">Campaign Deployment</h4>
+                                    <p data-i18n="process_step3_desc">Launching omni-channel structures across Google
+                                        and Meta, tailored for high ROAS.</p>
+                                </div>
+                            </div>
+                            <div class="process-step" tabindex="0">
+                                <div class="step-number">04</div>
+                                <div class="step-details">
+                                    <h4 data-i18n="process_step4_title">Scale & Optimize</h4>
+                                    <p data-i18n="process_step4_desc">Continuous multivariate testing of creatives,
+                                        audiences, and ad copy to lower CPA.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section id="pricing" class="pricing-section">
+            <div class="container">
+                <div class="section-header text-center fade-in-up">
+                    <h2 class="section-title" data-i18n="pricing_title">Tailored <span class="gradient-text">Growth
+                            Plans</span></h2>
+                    <p class="section-subtitle" data-i18n="pricing_subtitle">Transparent pricing designed to scale with
+                        your business. No hidden fees, just results.</p>
+                </div>
+
+                <div class="pricing-grid">
+                    <!-- Essential Plan -->
+                    <div class="glass-card pricing-card fade-in-up" style="animation-delay: 0.1s;">
+                        <div class="pricing-header">
+                            <h3 data-i18n="price_essential_name">Essential</h3>
+                            <div class="price">
+                                <span class="currency">€</span><span class="amount">999</span><span class="period"
+                                    data-i18n="price_period">/mo</span>
+                            </div>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class="fa-solid fa-check"></i> <span data-i18n="price_f1">Google OR Meta Ads
+                                    Management</span></li>
+                            <li><i class="fa-solid fa-check"></i> <span data-i18n="price_f2">Standard GTM Setup</span>
+                            </li>
+                            <li><i class="fa-solid fa-check"></i> <span data-i18n="price_f3">Monthly Performance
+                                    Report</span></li>
+                            <li class="disabled"><i class="fa-solid fa-xmark"></i> <span
+                                    data-i18n="price_f4">Multi-channel Strategy</span></li>
+                        </ul>
+                        <a href="#contact" class="btn btn-outline btn-block" data-i18n="price_cta">Select Plan</a>
+                        <div class="pricing-details">
+                            <h4 data-i18n="price_benefits_title">Why this plan?</h4>
+                            <p data-i18n="price_essential_benefit">Perfect for startups and small businesses looking to
+                                establish a solid footprint on one major ad platform. We focus on efficiency and getting
+                                you the best ROAS for every euro spent.</p>
+                            <h4 data-i18n="price_includes_title">What's included?</h4>
+                            <ul class="detail-list">
+                                <li data-i18n="price_essential_i1">Keyword research & Competitor analysis</li>
+                                <li data-i18n="price_essential_i2">Ad copy creation & multivariate testing</li>
+                                <li data-i18n="price_essential_i3">Basic conversion tracking & GTM audit</li>
+                            </ul>
+                        </div>
+                        <button class="expand-btn"><i class="fa-solid fa-plus"></i> <span
+                                data-i18n="price_learn_more">Learn More</span></button>
+                    </div>
+
+                    <!-- Performance Plan (Most Popular) -->
+                    <div class="glass-card pricing-card recommended fade-in-up" style="animation-delay: 0.2s;">
+                        <div class="popular-badge" data-i18n="price_popular">Most Popular</div>
+                        <div class="pricing-header">
+                            <h3 data-i18n="price_performance_name">Performance</h3>
+                            <div class="price">
+                                <span class="currency">€</span><span class="amount">2,499</span><span class="period"
+                                    data-i18n="price_period">/mo</span>
+                            </div>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class="fa-solid fa-check"></i> <span data-i18n="price_f1_p">Google + Meta Ads
+                                    Management</span></li>
+                            <li><i class="fa-solid fa-check"></i> <span data-i18n="price_f2_p">Advanced GTM & GA4
+                                    Setup</span></li>
+                            <li><i class="fa-solid fa-check"></i> <span data-i18n="price_f3_p">Bi-weekly Strategy
+                                    Calls</span></li>
+                            <li><i class="fa-solid fa-check"></i> <span data-i18n="price_f4_p">Creative
+                                    Optimization</span></li>
+                        </ul>
+                        <a href="#contact" class="btn btn-primary btn-block btn-glow" data-i18n="price_cta">Start
+                            Scaling</a>
+                        <div class="pricing-details">
+                            <h4 data-i18n="price_benefits_title">Why this plan?</h4>
+                            <p data-i18n="price_performance_benefit">The ultimate choice for growing brands. By
+                                combining Google and Meta, we create a powerful cross-platform synergy that drives users
+                                through a complete conversion funnel.</p>
+                            <h4 data-i18n="price_includes_title">What's included?</h4>
+                            <ul class="detail-list">
+                                <li data-i18n="price_performance_i1">Strategic multi-channel funnel design</li>
+                                <li data-i18n="price_performance_i2">Advanced GA4 event tracking & custom dashboards
+                                </li>
+                                <li data-i18n="price_performance_i3">Continuous A/B testing for landing page
+                                    optimization</li>
+                            </ul>
+                        </div>
+                        <button class="expand-btn"><i class="fa-solid fa-plus"></i> <span
+                                data-i18n="price_learn_more">Learn More</span></button>
+                    </div>
+
+                    <!-- Scale Plan -->
+                    <div class="glass-card pricing-card fade-in-up" style="animation-delay: 0.3s;">
+                        <div class="pricing-header">
+                            <h3 data-i18n="price_scale_name">Enterprise</h3>
+                            <div class="price">
+                                <span class="currency">€</span><span class="amount">4,999</span><span class="period"
+                                    data-i18n="price_period">/mo</span>
+                            </div>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class="fa-solid fa-check"></i> <span data-i18n="price_f1_s">Full Omni-channel
+                                    Management</span></li>
+                            <li><i class="fa-solid fa-check"></i> <span data-i18n="price_f2_s">Server-side Tracking
+                                    (CAPI)</span></li>
+                            <li><i class="fa-solid fa-check"></i> <span data-i18n="price_f3_s">Unlimited Ad Spend
+                                    Managed</span></li>
+                            <li><i class="fa-solid fa-check"></i> <span data-i18n="price_f4_s">Dedicated Account
+                                    Manager</span></li>
+                        </ul>
+                        <a href="#contact" class="btn btn-outline btn-block" data-i18n="price_cta">Select Plan</a>
+                        <div class="pricing-details">
+                            <h4 data-i18n="price_benefits_title">Why this plan?</h4>
+                            <p data-i18n="price_scale_benefit">Built for high-volume advertisers who need absolute data
+                                precision and aggressive market capture. We leverage server-side tracking to beat cookie
+                                limitations and maximize signal quality.</p>
+                            <h4 data-i18n="price_includes_title">What's included?</h4>
+                            <ul class="detail-list">
+                                <li data-i18n="price_scale_i1">Full Server-Side CAPI implementation</li>
+                                <li data-i18n="price_scale_i2">Unlimited campaign scaling & budget management</li>
+                                <li data-i18n="price_scale_i3">Weekly deep-dive strategy & creative workshops</li>
+                            </ul>
+                        </div>
+                        <button class="expand-btn"><i class="fa-solid fa-plus"></i> <span
+                                data-i18n="price_learn_more">Learn More</span></button>
+                    </div>
+
+                    <!-- Custom Plan -->
+                    <div class="glass-card pricing-card custom-plan fade-in-up" style="animation-delay: 0.4s;">
+                        <div class="pricing-header">
+                            <h3 data-i18n="price_custom_name">Custom</h3>
+                            <div class="price price-negotiable" data-i18n="price_custom_label">
+                                Contact Us
+                            </div>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class="fa-solid fa-check"></i> <span data-i18n="price_f1_c">Custom
+                                    Requirements</span></li>
+                            <li><i class="fa-solid fa-check"></i> <span data-i18n="price_f2_c">Complex GTM
+                                    Migrations</span></li>
+                            <li><i class="fa-solid fa-check"></i> <span data-i18n="price_f3_c">Fractional CMO
+                                    Consulting</span></li>
+                            <li><i class="fa-solid fa-check"></i> <span data-i18n="price_f4_c">Project-based
+                                    Services</span></li>
+                        </ul>
+                        <a href="#contact" class="btn btn-outline btn-block" data-i18n="price_cta_contact">Bespeak
+                            Audit</a>
+                        <div class="pricing-details">
+                            <h4 data-i18n="price_benefits_title">Why this plan?</h4>
+                            <p data-i18n="price_custom_benefit">For brands with unique challenges, complex technical
+                                stacks, or those needing high-level strategic guidance without full-time agency
+                                management.</p>
+                            <h4 data-i18n="price_includes_title">What's included?</h4>
+                            <ul class="detail-list">
+                                <li data-i18n="price_custom_i1">Tailored scope of work & project milestones</li>
+                                <li data-i18n="price_custom_i2">Technical architecture & data ecosystem design</li>
+                                <li data-i18n="price_custom_i3">Strategic mentorship for in-house marketing teams</li>
+                            </ul>
+                        </div>
+                        <button class="expand-btn"><i class="fa-solid fa-plus"></i> <span
+                                data-i18n="price_learn_more">Learn More</span></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA / Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-text fade-in-up">
+                        <h2 class="section-title" data-i18n="contact_title">Ready to Outpace the <span
+                                class="gradient-text">Competition?</span></h2>
+                        <p class="contact-desc" data-i18n="contact_desc">Stop guessing and start scaling. Request your
+                            complimentary ad account audit and custom growth roadmap today. We only onboard 3 new
+                            clients per month to ensure quality.</p>
+
+                        <div class="contact-info">
+                            <div class="info-item">
+                                <i class="fa-solid fa-envelope"></i> hello@hartmann-digital.com
+                            </div>
+                            <div class="info-item">
+                                <i class="fa-solid fa-location-dot"></i> <span data-i18n="contact_location">Global
+                                    Remote Agency</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="contact-form-wrapper glass-card fade-in-up" style="animation-delay: 0.2s;">
+                        <form id="lead-form" class="lead-form"
+                            onsubmit="event.preventDefault(); alert('Form submitted successfully!');">
+                            <div class="form-group">
+                                <label for="name" data-i18n="form_name">Name</label>
+                                <input type="text" id="name" name="name" required placeholder="John Doe"
+                                    data-i18n-placeholder="form_name_placeholder">
+                            </div>
+                            <div class="form-group">
+                                <label for="email" data-i18n="form_email">Work Email</label>
+                                <input type="email" id="email" name="email" required placeholder="john@company.com"
+                                    data-i18n-placeholder="form_email_placeholder">
+                            </div>
+                            <div class="form-group">
+                                <label for="budget" data-i18n="form_budget">Monthly Ad Budget</label>
+                                <select id="budget" name="budget" required>
+                                    <option value="" disabled selected data-i18n="form_budget_option_default">Select
+                                        Budget</option>
+                                    <option value="under-5k" data-i18n="form_budget_option1">Under $5k/mo</option>
+                                    <option value="5k-20k" data-i18n="form_budget_option2">$5k - $20k/mo</option>
+                                    <option value="20k-50k" data-i18n="form_budget_option3">$20k - $50k/mo</option>
+                                    <option value="50k+" data-i18n="form_budget_option4">$50k+/mo</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="goals" data-i18n="form_goals">Primary Goal</label>
+                                <textarea id="goals" name="goals" rows="3"
+                                    placeholder="Tell us what you want to achieve..."
+                                    data-i18n-placeholder="form_goals_placeholder"></textarea>
+                            </div>
+                            <button type="submit" id="submit-btn" class="btn btn-primary btn-block btn-glow"
+                                data-i18n="form_submit">Request Free Audit <i
+                                    class="fa-solid fa-paper-plane"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <span class="logo-icon"><i class="fa-solid fa-chart-line"></i></span>
+                        Hartmann<span class="gradient-text">Digital</span>
+                    </a>
+                    <p class="footer-desc" data-i18n="footer_desc">The elite performance marketing agency for ambitious
+                        brands demanding rigorous tracking and high ROAS.</p>
+                </div>
+                <div class="footer-links">
+                    <h4 data-i18n="footer_services">Services</h4>
+                    <ul>
+                        <li><a href="#service-google" data-i18n="service_google_name">Google Ads</a></li>
+                        <li><a href="#service-meta" data-i18n="service_meta_name">Meta Ads</a></li>
+                        <li><a href="#service-gtm" data-i18n="service_gtm_name">GTM & GA4 Setup</a></li>
+                        <li><a href="#" data-i18n="footer_ss_tracking">Server-Side Tracking</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4 data-i18n="footer_company">Company</h4>
+                    <ul>
+                        <li><a href="#" data-i18n="footer_about">About Us</a></li>
+                        <li><a href="#" data-i18n="footer_case_studies">Case Studies</a></li>
+                        <li><a href="#" data-i18n="footer_careers">Careers</a></li>
+                        <li><a href="#" data-i18n="footer_contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4 data-i18n="footer_connect">Connect</h4>
+                    <div class="social-icons">
+                        <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-i18n="footer_copyright">&copy; 2026 Hartmann Digital Agency. All rights reserved.</p>
+                <div class="legal-links">
+                    <a href="#" data-i18n="footer_privacy">Privacy Policy</a>
+                    <a href="#" data-i18n="footer_terms">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom Interactivity Scripts -->
+    <script src="script.js"></script>
+</body>
+
+</html>
