@@ -1010,14 +1010,13 @@ img {
   padding: 3rem 2rem;
   position: relative;
   height: 680px;
-  overflow: hidden;
+  overflow: visible;
   cursor: pointer;
   transition: border-color 0.4s cubic-bezier(0.4, 0, 0.2, 1), background 0.4s cubic-bezier(0.4, 0, 0.2, 1), transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .pricing-card.expanded {
   height: auto;
-  overflow: visible;
 }
 
 .pricing-card:hover {
@@ -1030,13 +1029,14 @@ img {
   background: rgba(59, 130, 246, 0.05);
   transform: scale(1.05);
   z-index: 10;
+  padding-top: 4rem;
 }
 
 .popular-badge {
   position: absolute;
-  top: 0;
+  top: 1rem;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
   background: var(--gradient-primary);
   color: white;
   padding: 0.5rem 1.5rem;
@@ -1045,6 +1045,7 @@ img {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
+  white-space: nowrap;
 }
 
 .pricing-header {
@@ -1359,6 +1360,7 @@ img {
   }
 
   .pricing-card {
+    height: auto;
     min-height: auto;
   }
 }
