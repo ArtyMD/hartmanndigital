@@ -626,5 +626,45 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 1500);
         });
     }
+    /*=============================================================================
+      Testimonials Auto-Scrolling Carousel
+    =============================================================================*/
+    const carouselTrack = document.getElementById('testimonial-track');
+    if (carouselTrack) {
+        function scrollNext() {
+            const firstCard = carouselTrack.firstElementChild;
+            if (!firstCard) return;
+
+            // Calculate width including gap
+            const cardStyle = window.getComputedStyle(firstCard);
+            const trackStyle = window.getComputedStyle(carouselTrack);
+            // Gap is defined on the flex container (carouselTrack)
+            const gap = parseFloat(trackStyle.gap) || 0;
+            const cardWidth = firstCard.offsetWidth + gap;
+
+            // Animate sliding left
+            carouselTrack.style.transition = 'transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+            carouselTrack.style.transform = `translateX(-${cardWidth}px)`;
+
+            // When animation completes, instantly move the first DOM node to the end and reset translation
+            setTimeout(() => {
+                carouselTrack.style.transition = 'none';
+                carouselTrack.appendChild(firstCard);
+                carouselTrack.style.transform = 'translateX(0)';
+            }, 800); // matches the 0.8s CSS transition
+        }
+
+        // Start 5 second interval
+        let carouselInterval = setInterval(scrollNext, 5000);
+
+        // Pause on hover for better UX
+        const carouselContainer = document.querySelector('.carousel-container');
+        if (carouselContainer) {
+            carouselContainer.addEventListener('mouseenter', () => clearInterval(carouselInterval));
+            carouselContainer.addEventListener('mouseleave', () => {
+                carouselInterval = setInterval(scrollNext, 5000);
+            });
+        }
+    }
 
 });
