@@ -50,11 +50,35 @@ html {
 
 body {
   font-family: var(--font-body);
-  background-color: var(--bg-color);
+  background: linear-gradient(135deg, #0b0c10, #12071e, #07101f, #0b0c10);
+  background-size: 400% 400%;
+  animation: gradientShift 18s ease infinite;
   color: var(--text-main);
   line-height: 1.6;
   overflow-x: hidden;
   position: relative;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  25% {
+    background-position: 100% 50%;
+  }
+
+  50% {
+    background-position: 100% 0%;
+  }
+
+  75% {
+    background-position: 0% 100%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 h1,
