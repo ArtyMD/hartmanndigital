@@ -471,6 +471,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Save preference
         localStorage.setItem('preferred-lang', lang);
+
+        // Update Captcha language if form is present
+        if (typeof window.generateCaptcha === 'function') {
+            window.generateCaptcha();
+        }
     }
 
     // Initialize with saved language or default English
@@ -593,12 +598,65 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     /*=============================================================================
+      Math Captcha Logic
+    =============================================================================*/
+    let captchaAnswer = 0;
+    const captchaLabel = document.getElementById('captcha-label');
+    const captchaInput = document.getElementById('captcha');
+    const refreshCaptchaBtn = document.getElementById('refresh-captcha');
+
+    window.generateCaptcha = function () {
+        if (!captchaLabel || !captchaInput) return;
+        const num1 = Math.floor(Math.random() * 10) + 1;
+        const num2 = Math.floor(Math.random() * 10) + 1;
+        captchaAnswer = num1 + num2;
+
+        const currentLang = localStorage.getItem('preferred-lang') || 'en';
+        let questionText = `What is ${num1} + ${num2}?`;
+        if (currentLang === 'ru') {
+            questionText = `Сколько будет ${num1} + ${num2}?`;
+            captchaInput.placeholder = "Введите ответ";
+        } else if (currentLang === 'ro') {
+            questionText = `Cât este ${num1} + ${num2}?`;
+            captchaInput.placeholder = "Introduceți răspunsul";
+        } else {
+            captchaInput.placeholder = "Enter answer";
+        }
+
+        captchaLabel.textContent = questionText;
+        captchaInput.value = '';
+    };
+
+    if (captchaLabel) {
+        window.generateCaptcha();
+        if (refreshCaptchaBtn) {
+            refreshCaptchaBtn.addEventListener('click', window.generateCaptcha);
+        }
+    }
+
+    /*=============================================================================
       Form Submission Simulation
     =============================================================================*/
     const leadForm = document.getElementById('lead-form');
     if (leadForm) {
         leadForm.addEventListener('submit', (e) => {
             e.preventDefault();
+
+            // Captcha validation
+            if (captchaInput) {
+                const userAnswer = parseInt(captchaInput.value.trim(), 10);
+                if (isNaN(userAnswer) || userAnswer !== captchaAnswer) {
+                    const currentLang = localStorage.getItem('preferred-lang') || 'en';
+                    let errorMsg = "Incorrect math answer. Please try again.";
+                    if (currentLang === 'ru') errorMsg = "Неверный ответ. Попробуйте еще раз.";
+                    if (currentLang === 'ro') errorMsg = "Răspuns incorect. Vă rugăm să încercați din nou.";
+
+                    alert(errorMsg);
+                    window.generateCaptcha();
+                    return;
+                }
+            }
+
             const submitBtn = document.getElementById('submit-btn');
             const originalText = submitBtn.innerHTML;
 

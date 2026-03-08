@@ -614,8 +614,7 @@
                     </div>
 
                     <div class="contact-form-wrapper glass-card fade-in-up" style="animation-delay: 0.2s;">
-                        <form id="lead-form" class="lead-form"
-                            onsubmit="event.preventDefault(); alert('Form submitted successfully!');">
+                        <form id="lead-form" class="lead-form">
                             <div class="form-group">
                                 <label for="name" data-i18n="form_name">Name</label>
                                 <input type="text" id="name" name="name" required placeholder="John Doe"
@@ -642,6 +641,18 @@
                                 <textarea id="goals" name="goals" rows="3"
                                     placeholder="Tell us what you want to achieve..."
                                     data-i18n-placeholder="form_goals_placeholder"></textarea>
+                            </div>
+                            <div class="form-group captcha-group">
+                                <label for="captcha" id="captcha-label">What is 5 + 3?</label>
+                                <div style="display: flex; gap: 10px;">
+                                    <input type="text" id="captcha" name="captcha" required placeholder="Enter answer"
+                                        style="flex: 1;">
+                                    <button type="button" id="refresh-captcha" class="btn btn-outline"
+                                        style="padding: 0 15px; display: flex; align-items: center; justify-content: center;"
+                                        aria-label="Refresh Captcha">
+                                        <i class="fa-solid fa-arrows-rotate"></i>
+                                    </button>
+                                </div>
                             </div>
                             <button type="submit" id="submit-btn" class="btn btn-primary btn-block btn-glow"
                                 data-i18n="form_submit">Request Free Audit <i
