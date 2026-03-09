@@ -10,12 +10,12 @@ document.addEventListener('DOMContentLoaded', () => {
             nav_pricing: "Pricing",
             nav_process: "Process",
             nav_contact: "Contact",
-            nav_cta: "Get a Free Audit",
+            nav_cta: "Start Your Performance Plan",
             hero_badge: "Elite Performance Marketing",
             hero_title: 'Turn Clicks Into <br/><span class="gradient-text">High-Value Clients.</span>',
             hero_desc: "We engineer scalable growth using data-driven <strong>Google Ads</strong>, high-converting <strong>Meta Ads</strong>, and flawless <strong>GTM & Analytics Setup</strong> so you track every dollar.",
-            hero_cta_primary: 'Start Scaling Now <i class="fa-solid fa-arrow-right"></i>',
-            hero_cta_secondary: "Explore Services",
+            hero_cta_primary: 'Start Your Performance Plan <i class="fa-solid fa-arrow-right"></i>',
+            hero_cta_secondary: "Inquire About Your Project",
             stat_roas: "Avg. ROAS",
             stat_spend: "Ad Spend Managed",
             stat_accuracy: "Data Accuracy",
@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
             badge_meta: "Meta Verified",
             badge_gtm: "GTM Certified",
             services_title: 'Our <span class="gradient-text">Core Expertise</span>',
-            services_subtitle: "We don't do everything. We do three things with absolute mastery to drive exponential revenue growth.",
+            services_subtitle: "Four elite pillars of performance. Each one engineered with absolute mastery to drive exponential, compounding revenue growth.",
             service_google_name: "Google Ads",
             service_google_desc: "Dominate search intent. We deploy search, shopping, and performance max campaigns that capture users exactly when they are ready to buy.",
             service_google_f1: "Intent-based Search Campaigns",
@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
             form_budget_option4: "€50k+/mo",
             form_goals: "Primary Goal",
             form_goals_placeholder: "Tell us what you want to achieve...",
-            form_submit: 'Request Free Audit <i class="fa-solid fa-paper-plane"></i>',
+            form_submit: 'Start Your Performance Plan <i class="fa-solid fa-paper-plane"></i>',
             footer_desc: "The elite performance marketing agency for ambitious brands demanding rigorous tracking and high ROAS.",
             footer_services: "Services",
             footer_ss_tracking: "Server-Side Tracking",
@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
             price_custom_name: "Custom",
             price_period: "/mo",
             price_cta: "Select Plan",
-            price_cta_contact: "Request Audit",
+            price_cta_contact: "Inquire About Custom",
             price_popular: "Most Popular",
             price_custom_label: "Contact Us",
             price_f1: "Google OR Meta Ads Management",
@@ -131,12 +131,12 @@ document.addEventListener('DOMContentLoaded', () => {
             nav_pricing: "Цены",
             nav_process: "Процесс",
             nav_contact: "Контакт",
-            nav_cta: "Бесплатный аудит",
+            nav_cta: "Начать план роста",
             hero_badge: "Элитный перфоманс-маркетинг",
             hero_title: 'Превращаем клики в <br/><span class="gradient-text">высокочековых клиентов.</span>',
             hero_desc: "Мы строим масштабируемый рост, используя <strong>Google Ads</strong> на основе данных, высококонверсионную <strong>Meta Ads</strong> и безупречную настройку <strong>GTM и аналитики</strong>.",
-            hero_cta_primary: 'Начать масштабирование <i class="fa-solid fa-arrow-right"></i>',
-            hero_cta_secondary: "Наши услуги",
+            hero_cta_primary: 'Запустить план роста <i class="fa-solid fa-arrow-right"></i>',
+            hero_cta_secondary: "Обсудить проект",
             stat_roas: "Средний ROAS",
             stat_spend: "Бюджет в управлении",
             stat_accuracy: "Точность данных",
@@ -171,21 +171,47 @@ document.addEventListener('DOMContentLoaded', () => {
             process_step4_title: "Масштаб и оптимизация",
             process_step4_desc: "Постоянное тестирование креативов, аудиторий и текстов для снижения стоимости лида.",
             contact_title: 'Готовы опередить <span class="gradient-text">конкурентов?</span>',
-            contact_desc: "Хватит гадать, пора масштабироваться. Запросите бесплатный аудит и персональный план роста сегодня. Мы берем только 3 новых клиента в месяц.",
+            contact_desc: "Хватит гадать, пора масштабироваться. Запросите персональный план роста сегодня. Мы берем только 3 новых клиента в месяц.",
             contact_location: "Глобальное удаленное агентство",
-            form_name: "Имя",
-            form_name_placeholder: "Иван Иванов",
             form_email: "Рабочий Email",
             form_email_placeholder: "ivan@company.com",
+            form_website: "Сайт",
+            form_website_placeholder: "https://www.company.com",
             form_budget: "Месячный бюджет",
             form_budget_option_default: "Выберите бюджет",
             form_budget_option1: "До €5,000/мес",
             form_budget_option2: "€5,000 - €20,000/мес",
             form_budget_option3: "€20,000 - €50,000/мес",
             form_budget_option4: "€50,000+/мес",
-            form_goals: "Основная цель",
+            form_services: "Требуемые услуги",
+            form_svc_ads: "Реклама",
+            form_svc_tracking: "Технический трекинг",
+            form_svc_email: "Email автоматизация",
+            form_svc_local: "Google Бизнес Профиль",
+            form_goals: "Текущие цели",
             form_goals_placeholder: "Расскажите, чего вы хотите достичь...",
-            form_submit: 'Запросить аудит <i class="fa-solid fa-paper-plane"></i>',
+            form_submit: 'Запустить план роста <i class="fa-solid fa-paper-plane"></i>',
+            trust_bar_text: "Сотрудничаем с амбициозными брендами",
+            service_paid_name: "Платная реклама",
+            service_paid_desc: "Элитные Google Search, Meta Ads и LSA. Многоканальные кампании, которые захватывают спрос прибыльно.",
+            service_paid_f1: "Google Search и LSA",
+            service_paid_f2: "Экосистема Meta Ads",
+            service_paid_f3: "Продвинутые стратегии ставок",
+            service_tech_name: "Технический фундамент",
+            service_tech_desc: "Мастерство GTM, серверный трекинг (CAPI) и кастомные дашборды GA4. Никогда не теряйте данные после iOS14.",
+            service_tech_f1: "Серверный трекинг (CAPI)",
+            service_tech_f2: "Архитектура GTM",
+            service_tech_f3: "Кастомные дашборды GA4",
+            service_local_name: "Локальное доминирование",
+            service_local_desc: "Управление Google Business Profile, SEO и рост репутации. Станьте первым выбором в местном поиске.",
+            service_local_f1: "Оптимизация Google Бизнес",
+            service_local_f2: "Локальное SEO",
+            service_local_f3: "Репутация и отзывы",
+            service_email_name: "Возврат выручки",
+            service_email_desc: "Email автоматизация, CRM и жизненный цикл клиента. Превращайте брошенные корзины в постоянных клиентов.",
+            service_email_f1: "Автоматические email-воронки",
+            service_email_f2: "Восстановление брошенных корзин",
+            service_email_f3: "CRM и жизненный цикл",
             footer_desc: "Элитное перфоманс-агентство для амбициозных брендов, требующих точного трекинга и высокого ROAS.",
             footer_services: "Услуги",
             footer_ss_tracking: "Серверный трекинг",
@@ -252,12 +278,12 @@ document.addEventListener('DOMContentLoaded', () => {
             nav_pricing: "Prețuri",
             nav_process: "Proces",
             nav_contact: "Contact",
-            nav_cta: "Audit Gratuit",
+            nav_cta: "Pornește Planul de Performanță",
             hero_badge: "Marketing de Performanță de Elită",
             hero_title: 'Transformă Click-urile în <br/><span class="gradient-text">Clienți Valoroși.</span>',
             hero_desc: "Construim creștere scalabilă folosind <strong>Google Ads</strong> bazat pe date, <strong>Meta Ads</strong> cu conversie ridicată și configurare impecabilă <strong>GTM și Analytics</strong>.",
-            hero_cta_primary: 'Începe Scalarea Acum <i class="fa-solid fa-arrow-right"></i>',
-            hero_cta_secondary: "Explorează Serviciile",
+            hero_cta_primary: 'Pornește Planul de Performanță <i class="fa-solid fa-arrow-right"></i>',
+            hero_cta_secondary: "Solicită o Consultație",
             stat_roas: "ROAS Mediu",
             stat_spend: "Buget Administrat",
             stat_accuracy: "Acuratețea Datelor",
@@ -292,21 +318,47 @@ document.addEventListener('DOMContentLoaded', () => {
             process_step4_title: "Scalare și Optimizare",
             process_step4_desc: "Testare continuă a creațiilor, audiențelor și textelor publicitare pentru a reduce CPA.",
             contact_title: 'Ești gata să depășești <span class="gradient-text">Concurența?</span>',
-            contact_desc: "Nu mai ghici și începe să scalezi. Solicită astăzi auditul gratuit al contului de publicitate și planul de creștere personalizat. Acceptăm doar 3 clienți noi pe lună.",
+            contact_desc: "Nu mai ghici și începe să scalezi. Solicită astăzi planul de creștere personalizat. Acceptăm doar 3 clienți noi pe lună.",
             contact_location: "Agenție Globală Remote",
-            form_name: "Nume",
-            form_name_placeholder: "Ion Popescu",
             form_email: "Email de Lucru",
             form_email_placeholder: "ion@companie.ro",
+            form_website: "URL Site",
+            form_website_placeholder: "https://www.company.com",
             form_budget: "Buget Lunar",
             form_budget_option_default: "Selectează Bugetul",
             form_budget_option1: "Sub €5,000/lună",
             form_budget_option2: "€5,000 - €20,000/lună",
             form_budget_option3: "€20,000 - €50,000/lună",
             form_budget_option4: "€50,000+/lună",
-            form_goals: "Obiectiv Principal",
+            form_services: "Servicii Necesare",
+            form_svc_ads: "Ads",
+            form_svc_tracking: "Tracking Tehnic",
+            form_svc_email: "Automatizare Email",
+            form_svc_local: "Google Business Profile",
+            form_goals: "Obiective Actuale",
             form_goals_placeholder: "Spune-ne ce vrei să obții...",
-            form_submit: 'Solicită Audit Gratuit <i class="fa-solid fa-paper-plane"></i>',
+            form_submit: 'Pornește Planul de Performanță <i class="fa-solid fa-paper-plane"></i>',
+            trust_bar_text: "Parteneriem cu branduri ambițioase din toate industriile",
+            service_paid_name: "Achiziție Plătită",
+            service_paid_desc: "Google Search de elită, Meta Ads și LSA. Campanii multi-canal care captează cererea profitabil.",
+            service_paid_f1: "Google Search & LSA",
+            service_paid_f2: "Ecosistem Meta Ads",
+            service_paid_f3: "Licitare Avansată Multi-canal",
+            service_tech_name: "Fundație Tehnică",
+            service_tech_desc: "GTM, Tracking Server-Side (CAPI) și dashboard-uri GA4. Nu mai pierde date de conversie după iOS14.",
+            service_tech_f1: "Tracking Server-Side (CAPI)",
+            service_tech_f2: "Arhitectură GTM Avansată",
+            service_tech_f3: "Dashboard-uri GA4 Personalizate",
+            service_local_name: "Dominanță Locală",
+            service_local_desc: "Gestionarea Google Business Profile, SEO local și creșterea reputației. Fii prima alegere în căutările locale.",
+            service_local_f1: "Optimizare Google Business",
+            service_local_f2: "SEO Local Dominant",
+            service_local_f3: "Automatizare Recenzii",
+            service_email_name: "Recuperare Venituri",
+            service_email_desc: "Automatizare Email completă, integrare CRM și marketing pe ciclu de viață. Transformă click-urile în clienți fideli.",
+            service_email_f1: "Funnel-uri Email Automate",
+            service_email_f2: "Recuperare Coș Abandonat",
+            service_email_f3: "CRM & Marketing Ciclu de Viață",
             footer_desc: "Agenția de elită în marketing de performanță pentru branduri ambițioase care cer tracking riguros și ROAS ridicat.",
             footer_services: "Servicii",
             footer_ss_tracking: "Tracking Server-Side",
@@ -380,29 +432,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
         card.addEventListener('click', (e) => {
             // Prevent interference with CTA buttons or links
-            if (e.target.closest('a')) return;
+            if (e.target.closest('a') && !e.target.closest('.expand-btn')) return;
 
             const isExpanded = card.classList.contains('expanded');
 
-            // 1. If we are opening a new one, close all others first
+            // 1. Close all cards first and reset their button text
+            pricingCards.forEach(otherCard => {
+                otherCard.classList.remove('expanded');
+                const otherBtnSpan = otherCard.querySelector('.expand-btn span');
+                if (otherBtnSpan) {
+                    otherBtnSpan.textContent = translations[localStorage.getItem('preferred-lang') || 'en'].price_learn_more || 'Learn More';
+                }
+            });
+
+            // 2. If the clicked card wasn't already expanded, open it and change its text
             if (!isExpanded) {
-                pricingCards.forEach(otherCard => {
-                    otherCard.classList.remove('expanded');
-                    const otherBtnSpan = otherCard.querySelector('.expand-btn span');
-                    if (otherBtnSpan) {
-                        otherBtnSpan.textContent = translations[localStorage.getItem('preferred-lang') || 'en'].price_learn_more || 'Learn More';
-                    }
-                });
-            }
-
-            // 2. Toggle current card
-            card.classList.toggle('expanded');
-
-            // 3. Update button text for current card
-            if (card.classList.contains('expanded')) {
+                card.classList.add('expanded');
                 btnText.textContent = translations[localStorage.getItem('preferred-lang') || 'en'].price_show_less || 'Show Less';
-            } else {
-                btnText.textContent = translations[localStorage.getItem('preferred-lang') || 'en'].price_learn_more || 'Learn More';
             }
         });
 
@@ -598,90 +644,58 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     /*=============================================================================
-      Math Captcha Logic
+      ReCaptcha v3 + Form Submission
     =============================================================================*/
-    let captchaAnswer = 0;
-    const captchaLabel = document.getElementById('captcha-label');
-    const captchaInput = document.getElementById('captcha');
-    const refreshCaptchaBtn = document.getElementById('refresh-captcha');
+    const RECAPTCHA_SITE_KEY = '6LfPuYQsAAAAAAe1IEBBJ2gpdKrHnLHxB6BeCG7W';
 
-    window.generateCaptcha = function () {
-        if (!captchaLabel || !captchaInput) return;
-        const num1 = Math.floor(Math.random() * 10) + 1;
-        const num2 = Math.floor(Math.random() * 10) + 1;
-        captchaAnswer = num1 + num2;
-
-        const currentLang = localStorage.getItem('preferred-lang') || 'en';
-        let questionText = `What is ${num1} + ${num2}?`;
-        if (currentLang === 'ru') {
-            questionText = `Сколько будет ${num1} + ${num2}?`;
-            captchaInput.placeholder = "Введите ответ";
-        } else if (currentLang === 'ro') {
-            questionText = `Cât este ${num1} + ${num2}?`;
-            captchaInput.placeholder = "Introduceți răspunsul";
-        } else {
-            captchaInput.placeholder = "Enter answer";
-        }
-
-        captchaLabel.textContent = questionText;
-        captchaInput.value = '';
-    };
-
-    if (captchaLabel) {
-        window.generateCaptcha();
-        if (refreshCaptchaBtn) {
-            refreshCaptchaBtn.addEventListener('click', window.generateCaptcha);
-        }
-    }
-
-    /*=============================================================================
-      Form Submission Simulation
-    =============================================================================*/
     const leadForm = document.getElementById('lead-form');
     if (leadForm) {
-        leadForm.addEventListener('submit', (e) => {
+        leadForm.addEventListener('submit', async (e) => {
             e.preventDefault();
-
-            // Captcha validation
-            if (captchaInput) {
-                const userAnswer = parseInt(captchaInput.value.trim(), 10);
-                if (isNaN(userAnswer) || userAnswer !== captchaAnswer) {
-                    const currentLang = localStorage.getItem('preferred-lang') || 'en';
-                    let errorMsg = "Incorrect math answer. Please try again.";
-                    if (currentLang === 'ru') errorMsg = "Неверный ответ. Попробуйте еще раз.";
-                    if (currentLang === 'ro') errorMsg = "Răspuns incorect. Vă rugăm să încercați din nou.";
-
-                    alert(errorMsg);
-                    window.generateCaptcha();
-                    return;
-                }
-            }
 
             const submitBtn = document.getElementById('submit-btn');
             const originalText = submitBtn.innerHTML;
 
-            // Visual feedback
             submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Processing...';
             submitBtn.disabled = true;
 
-            setTimeout(() => {
-                submitBtn.innerHTML = '<i class="fa-solid fa-check"></i> Audit Requested!';
-                submitBtn.classList.remove('btn-primary');
-                submitBtn.style.background = '#34a853'; // Google Green success
-                submitBtn.style.boxShadow = '0 0 20px rgba(52, 168, 83, 0.4)';
+            try {
+                let token = '';
+                if (typeof grecaptcha !== 'undefined') {
+                    token = await new Promise((resolve, reject) => {
+                        grecaptcha.ready(() => {
+                            grecaptcha.execute(RECAPTCHA_SITE_KEY, { action: 'submit_inquiry' })
+                                .then(resolve)
+                                .catch(reject);
+                        });
+                    });
+                }
 
-                // Reset form
-                leadForm.reset();
+                const tokenField = document.getElementById('recaptchaToken');
+                if (tokenField) tokenField.value = token;
 
-                // Revert button after 3 seconds
+                // --- Visual success feedback ---
                 setTimeout(() => {
-                    submitBtn.innerHTML = originalText;
-                    submitBtn.disabled = false;
-                    submitBtn.classList.add('btn-primary');
-                    submitBtn.style.background = '';
-                    submitBtn.style.boxShadow = '';
-                }, 3000);
-            }, 1500);
+                    submitBtn.innerHTML = '<i class="fa-solid fa-check"></i> Plan Requested!';
+                    submitBtn.classList.remove('btn-primary');
+                    submitBtn.style.background = '#34a853';
+                    submitBtn.style.boxShadow = '0 0 20px rgba(52, 168, 83, 0.4)';
+                    leadForm.reset();
+
+                    setTimeout(() => {
+                        submitBtn.innerHTML = originalText;
+                        submitBtn.disabled = false;
+                        submitBtn.classList.add('btn-primary');
+                        submitBtn.style.background = '';
+                        submitBtn.style.boxShadow = '';
+                    }, 3500);
+                }, 800);
+
+            } catch (err) {
+                console.error('ReCaptcha error:', err);
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+            }
         });
     }
     /*=============================================================================

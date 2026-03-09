@@ -338,7 +338,15 @@ img {
 .header-actions {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1rem;
+  flex-shrink: 0;
+}
+
+/* Compact CTA in sticky nav */
+.sticky-cta {
+  padding: 0.6rem 1.25rem;
+  font-size: 0.85rem;
+  white-space: nowrap;
 }
 
 /* Language Switcher Styles */
@@ -452,16 +460,21 @@ img {
   font-size: 1.25rem;
 }
 
+.main-nav {
+  margin-left: 3rem;
+}
+
 .nav-links {
   display: flex;
-  gap: 2.5rem;
+  gap: 1.5rem;
 }
 
 .nav-link {
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: 0.875rem;
   position: relative;
   padding: 0.5rem 0;
+  white-space: nowrap;
 }
 
 .nav-link::after {
@@ -662,10 +675,55 @@ img {
   padding: var(--section-padding);
 }
 
+/* Trust Bar */
+.trust-bar {
+  padding: 3rem 0;
+  border-top: 1px solid var(--glass-border);
+  border-bottom: 1px solid var(--glass-border);
+  background: rgba(11, 12, 16, 0.5);
+  text-align: center;
+}
+
+.trust-text {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 1.5rem;
+}
+
+.trust-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.trust-logos img {
+  height: 30px;
+  filter: grayscale(100%) opacity(0.6);
+  transition: var(--transition-fast);
+}
+
+.trust-logos img:hover {
+  filter: grayscale(0%) opacity(1);
+}
+
 .services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 2rem;
+}
+
+.services-grid-4 {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.service-link {
+  white-space: nowrap;
+  margin-top: 1.5rem;
+  width: 100%;
 }
 
 .service-card {
@@ -684,16 +742,20 @@ img {
   height: 4px;
 }
 
-#service-google::before {
+#service-paid::before {
   background: linear-gradient(90deg, #4285f4, #ea4335, #fbbc04, #34a853);
 }
 
-#service-meta::before {
-  background: linear-gradient(90deg, #1877f2, #8b5cf6);
+#service-tech::before {
+  background: linear-gradient(90deg, #1877f2, #8b5cf6, #06b6d4);
 }
 
-#service-gtm::before {
-  background: linear-gradient(90deg, #fbbc04, #ff6d01);
+#service-local::before {
+  background: linear-gradient(90deg, #ea4335, #fbbc04);
+}
+
+#service-email::before {
+  background: linear-gradient(90deg, #8b5cf6, #ec4899);
 }
 
 .service-icon {
@@ -1081,22 +1143,23 @@ img {
 .pricing-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
+  gap: 1.5rem;
   align-items: start;
 }
 
 .pricing-card {
   display: flex;
   flex-direction: column;
-  padding: 3rem 2rem;
+  padding: 3rem 1.5rem;
   position: relative;
-  height: 680px;
+  height: 760px;
   overflow: visible;
   cursor: pointer;
-  transition: border-color 0.4s cubic-bezier(0.4, 0, 0.2, 1), background 0.4s cubic-bezier(0.4, 0, 0.2, 1), transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: var(--transition-med);
 }
 
 .pricing-card.expanded {
+  min-height: auto;
   height: auto;
 }
 
@@ -1277,6 +1340,13 @@ img {
 
 .pricing-features li i {
   font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+.pricing-card .btn {
+  white-space: normal;
+  text-align: center;
+  line-height: 1.2;
 }
 
 .pricing-features li .fa-check {
@@ -1448,4 +1518,167 @@ img {
     height: auto;
     min-height: auto;
   }
+}
+
+/*=============================================================================
+  Contact / Form Styles
+=============================================================================*/
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.form-group label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  padding: 0.85rem 1rem;
+  color: var(--text-main);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+  outline: none;
+  width: 100%;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--accent-blue);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+.form-group select option {
+  background: #12141a;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.checkbox-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-main);
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--glass-border);
+  padding: 0.65rem 1rem;
+  border-radius: 10px;
+  transition: all var(--transition-fast);
+}
+
+.checkbox-label:hover {
+  border-color: rgba(59, 130, 246, 0.4);
+  background: rgba(59, 130, 246, 0.05);
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  min-width: 16px;
+  accent-color: var(--accent-blue);
+  margin: 0;
+  padding: 0;
+  border-radius: 4px;
+}
+
+/*=============================================================================
+  JSON-LD / Schema / SEO
+=============================================================================*/
+/* Helpers for sub-page layouts */
+.sub-page-hero {
+  padding: 10rem 0 5rem 0;
+  text-align: center;
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.sub-page-hero .badge {
+  margin: 0 auto 1.5rem;
+}
+
+.sub-page-hero .section-subtitle {
+  max-width: 700px;
+}
+
+.case-studies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 2rem;
+  padding: var(--section-padding);
+}
+
+.case-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.case-card .metric-row {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.case-metric {
+  background: rgba(59, 130, 246, 0.08);
+  border: 1px solid rgba(59, 130, 246, 0.15);
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  flex: 1;
+  text-align: center;
+}
+
+.case-metric .metric-val {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--accent-cyan);
+}
+
+.case-metric .metric-lbl {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 0.25rem;
+}
+
+@media (max-width: 768px) {
+  .checkbox-group {
+    grid-template-columns: 1fr;
+  }
+
+  .services-grid-4 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Hide reCAPTCHA v3 floating badge
+   Permitted when attribution text is included in the UI (already in form notice) */
+.grecaptcha-badge {
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
 }
