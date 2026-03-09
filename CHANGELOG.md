@@ -7,6 +7,7 @@ This file tracks all modifications and updates made to the Antigravity project b
 - Fixed 4-pillar service links to prevent text wrapping on smaller screens. 
 - Repaired pricing section accordion logic: only one pricing block expands at a time now.
 - Ensured uniform `760px` height across all pricing cards while unexpanded, and prevented horizontal buttons from overflowing.
+- Restructured "Our Core Expertise" layout to display strictly as 2 columns or 4 columns on desktop sizes.
 
 ## [2026-03-08] - Form Security Update
 - Implemented a dynamic math CAPTCHA on the contact form to prevent spam submissions.
