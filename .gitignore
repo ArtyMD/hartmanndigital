@@ -1,0 +1,14 @@
+# OS Metadata
+.DS_Store
+Thumbs.db
+
+# Private Credentials (PPC API keys, etc.)
+.env
+auth.json
+
+# Local Logs
+*.log
+npm-debug.log*
+
+# Large Library Folders
+node_modules/
