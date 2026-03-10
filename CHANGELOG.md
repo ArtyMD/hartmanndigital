@@ -30,3 +30,11 @@ This file tracks all modifications and updates made to the Antigravity project b
 - Created `package.json` to resolve the `npm error ENOENT` when running `npm run dev`.
 - Added a `dev` script using `npx --yes live-server` to spin up a local development server with live reload.
 - Created this `CHANGELOG.md` file to keep track of all future modifications.
+
+### UI & Pricing Overhaul (Latest Session)
+- Styled contact form checkboxes to match the site's dark theme.
+- Fixed text alignment for the Google Business Profile checkbox option.
+- Fixed CSS to restore visibility to the Google reCAPTCHA v3 floating badge.
+- Generated and added avicon.png across all HTML headers.
+- Rewrote the pricing block section in index.html to a 3-tier structure (Starter, Accelerator, Market Leader) based on the new framework.
+- Added 'Growth Boosters' section below the pricing grid for a la carte upsells.

@@ -1681,10 +1681,58 @@ img {
   }
 }
 
-/* Hide reCAPTCHA v3 floating badge
-   Permitted when attribution text is included in the UI (already in form notice) */
+/* Custom Checkboxes */
+.checkbox-group label {
+  display: flex !important;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-weight: 500;
+  cursor: pointer;
+  line-height: 1.4;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+.checkbox-group input[type="checkbox"] {
+  appearance: none;
+  background-color: rgba(0, 0, 0, 0.4);
+  margin: 0;
+  margin-top: 0.15rem;
+  font: inherit;
+  color: currentColor;
+  width: 1.25em;
+  height: 1.25em;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0.25em;
+  display: grid;
+  place-content: center;
+  transition: all var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.checkbox-group input[type="checkbox"]::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em white;
+  background-color: white;
+  transform-origin: center;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+
+.checkbox-group input[type="checkbox"]:checked {
+  background-color: var(--accent-blue);
+  border-color: var(--accent-blue);
+}
+
+.checkbox-group input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
+
+/* ReCaptcha v3 floating badge - Made visible as requested */
 .grecaptcha-badge {
-  visibility: hidden !important;
-  opacity: 0 !important;
-  pointer-events: none !important;
+  /* Default positioning by Google */
+  z-index: 100;
 }
