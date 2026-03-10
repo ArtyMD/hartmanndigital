@@ -658,9 +658,10 @@ document.addEventListener('DOMContentLoaded', () => {
     =============================================================================*/
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
     const mainNav = document.getElementById('main-nav');
-    const mobileMenuIcon = mobileMenuBtn.querySelector('i');
 
-    if (mobileMenuBtn) {
+    if (mobileMenuBtn && mainNav) {
+        const mobileMenuIcon = mobileMenuBtn.querySelector('i');
+
         mobileMenuBtn.addEventListener('click', () => {
             mainNav.classList.toggle('active');
 

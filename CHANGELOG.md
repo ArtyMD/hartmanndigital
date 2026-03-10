@@ -70,3 +70,7 @@ This file tracks all modifications and updates made to the Antigravity project b
 - Added ackground-color: #0b0c10 solid fallback before the animated gradient on ody in style.css. Without this, mobile browsers that don't run CSS animations (or that use prefers-reduced-motion) show a white page.
 - Added explicit ody.dark-theme CSS rule to lock the background on all inner pages.
 - Added @media (prefers-reduced-motion: reduce) rule to disable the gradient animation and use the solid dark color instead.
+
+### Fix Burger Menu Not Working on Inner Pages
+- Fixed a critical null reference error in script.js where mobileMenuBtn.querySelector('i') was called on line 661 BEFORE the null guard if (mobileMenuBtn) on line 663. This caused a TypeError crash that silently broke ALL mobile menu functionality on inner pages.
+- Moved the mobileMenuIcon variable declaration inside the if (mobileMenuBtn && mainNav) guard block to prevent any crash.
