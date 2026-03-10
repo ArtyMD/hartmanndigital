@@ -65,3 +65,8 @@ This file tracks all modifications and updates made to the Antigravity project b
 - Removed hardcoded inline style=grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) from .services-grid-3 and moved it to style.css.
 - Added @media (max-width: 768px) override for .growth-boosters to reduce its inline padding override.
 - Updated .pricing-grid base rule from epeat(4, 1fr) to epeat(3, 1fr) to match the 3-tier plan structure.
+
+### Fix White Background on Inner Pages (Mobile)
+- Added ackground-color: #0b0c10 solid fallback before the animated gradient on ody in style.css. Without this, mobile browsers that don't run CSS animations (or that use prefers-reduced-motion) show a white page.
+- Added explicit ody.dark-theme CSS rule to lock the background on all inner pages.
+- Added @media (prefers-reduced-motion: reduce) rule to disable the gradient animation and use the solid dark color instead.
