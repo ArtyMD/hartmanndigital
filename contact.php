@@ -37,12 +37,13 @@ $recaptcha_token = $data['recaptchaToken'] ?? '';
 
 if (is_array($services)) {
     $services = implode(', ', array_map('htmlspecialchars', $services));
-} else {
+}
+else {
     $services = htmlspecialchars($services);
 }
 
 // Basic validation
-if (empty($email) || empty($website) || empty($budget) || empty($goals)) {
+if (empty($email) || empty($budget) || empty($goals)) {
     http_response_code(400);
     echo json_encode(['success' => false, 'message' => 'Please fill in all required fields.']);
     exit;
@@ -64,12 +65,12 @@ if (!empty($recaptcha_token) && $recaptcha_secret !== 'YOUR_RECAPTCHA_SECRET_KEY
 
     $options = [
         'http' => [
-            'header'  => "Content-type: application/x-www-form-urlencoded\r\n",
-            'method'  => 'POST',
+            'header' => "Content-type: application/x-www-form-urlencoded\r\n",
+            'method' => 'POST',
             'content' => http_build_query($verify_data)
         ]
     ];
-    $context  = stream_context_create($options);
+    $context = stream_context_create($options);
     $verify_result = file_get_contents($verify_url, false, $context);
     $response_data = json_decode($verify_result);
 
@@ -97,7 +98,8 @@ $headers .= "X-Mailer: PHP/" . phpversion();
 if (mail($to_email, $subject, $message, $headers)) {
     http_response_code(200);
     echo json_encode(['success' => true, 'message' => 'Your inquiry has been sent successfully.']);
-} else {
+}
+else {
     http_response_code(500);
     echo json_encode(['success' => false, 'message' => 'Failed to send the inquiry. Please try again later.']);
 }

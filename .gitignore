@@ -12,3 +12,6 @@ npm-debug.log*
 
 # Large Library Folders
 node_modules/
+
+# AI Assistant Logs
+CHANGELOG.md
