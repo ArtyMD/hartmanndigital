@@ -674,8 +674,23 @@ document.addEventListener('DOMContentLoaded', () => {
                 const tokenField = document.getElementById('recaptchaToken');
                 if (tokenField) tokenField.value = token;
 
-                // --- Visual success feedback ---
-                setTimeout(() => {
+                // --- Send Data via Fetch ---
+                const formData = new FormData(leadForm);
+                const data = Object.fromEntries(formData.entries());
+                data.services = formData.getAll('services');
+
+                const response = await fetch('contact.php', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                });
+
+                const result = await response.json();
+
+                if (response.ok && result.success) {
+                    // Visual success feedback
                     submitBtn.innerHTML = '<i class="fa-solid fa-check"></i> Plan Requested!';
                     submitBtn.classList.remove('btn-primary');
                     submitBtn.style.background = '#34a853';
@@ -688,11 +703,14 @@ document.addEventListener('DOMContentLoaded', () => {
                         submitBtn.classList.add('btn-primary');
                         submitBtn.style.background = '';
                         submitBtn.style.boxShadow = '';
-                    }, 3500);
-                }, 800);
+                    }, 4000);
+                } else {
+                    throw new Error(result.message || 'Form submission failed');
+                }
 
             } catch (err) {
-                console.error('ReCaptcha error:', err);
+                console.error('Form/ReCaptcha error:', err);
+                alert('There was an error submitting the form: ' + (err.message || 'Please try again.'));
                 submitBtn.innerHTML = originalText;
                 submitBtn.disabled = false;
             }
