@@ -517,6 +517,8 @@ img {
   color: var(--text-main);
   font-size: 1.5rem;
   cursor: pointer;
+  position: relative;
+  z-index: 1002;
 }
 
 /*=============================================================================
@@ -1511,10 +1513,14 @@ img {
     z-index: 1000;
     transition: var(--transition-med);
     border-left: 1px solid var(--glass-border);
+    pointer-events: none;
+    /* Don't intercept clicks when off-screen */
   }
 
   .main-nav.active {
     right: 0;
+    pointer-events: all;
+    /* Re-enable when open */
   }
 
   .nav-links {

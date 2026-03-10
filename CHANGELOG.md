@@ -74,3 +74,9 @@ This file tracks all modifications and updates made to the Antigravity project b
 ### Fix Burger Menu Not Working on Inner Pages
 - Fixed a critical null reference error in script.js where mobileMenuBtn.querySelector('i') was called on line 661 BEFORE the null guard if (mobileMenuBtn) on line 663. This caused a TypeError crash that silently broke ALL mobile menu functionality on inner pages.
 - Moved the mobileMenuIcon variable declaration inside the if (mobileMenuBtn && mainNav) guard block to prevent any crash.
+
+### Fix Burger Menu Click Not Registering on Mobile
+- Root cause: .main-nav is position: fixed on mobile and occupied the same visible z-index area as the hamburger button, intercepting touch events before they could reach the button.
+- Added z-index: 1002 and position: relative to the base .mobile-menu-btn rule.
+- Added pointer-events: none to .main-nav on mobile so the invisible off-screen panel never blocks clicks.
+- Added pointer-events: all to .main-nav.active to restore interactivity when the menu is open.
