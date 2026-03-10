@@ -10,6 +10,9 @@ This file tracks all modifications and updates made to the Antigravity project b
 - Removed external links from the Google Partner and Meta Verified badges in `index.html`.
 - Created `robots.txt` with SEO best practices and instructions to keep malicious bots out.
 - Generated `sitemap.xml` including all HTML pages for better search engine indexing.
+- Removed the "Careers" link from the footer section of all HTML files.
+- Created `privacy-policy.html` and `terms-of-service.html` with appropriate baseline text.
+- Updated the footer Legal Links to correctly point to the newly created privacy and TOS pages.
 - Added `CHANGELOG.md` to `.gitignore` to prevent tracking AI chat history changes in version control.
 
 ## [2026-03-09] - UI & Pricing Enhancements
