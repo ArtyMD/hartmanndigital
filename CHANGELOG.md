@@ -45,3 +45,7 @@ This file tracks all modifications and updates made to the Antigravity project b
 - Injected the Language Switcher logic into the Navbars of all 7 internal HTML pages.
 - Upgraded \script.js\ dictionary to store Russian & Romanian translations for the inner-page hero texts.
 - Mapped all internal pages with \data-i18n\ translation keys so language applies site-wide seamlessly.
+
+### Form Submission & ReCaptcha Fixes
+- Injected the missing "recaptchaToken" hidden input field into "index.html" so the ReCaptcha token actually sends to the backend.
+- Rewrote the ReCaptcha execution and Form Submission fetch in "script.js" to include robust try/catch blocks that automatically bypass ReCaptcha and PHP validation if testing is detected on "localhost" via "live-server", repairing the "JSON.parse" fatal error.

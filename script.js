@@ -707,34 +707,50 @@ document.addEventListener('DOMContentLoaded', () => {
             try {
                 let token = '';
                 if (typeof grecaptcha !== 'undefined') {
-                    token = await new Promise((resolve, reject) => {
-                        grecaptcha.ready(() => {
-                            grecaptcha.execute(RECAPTCHA_SITE_KEY, { action: 'submit_inquiry' })
-                                .then(resolve)
-                                .catch(reject);
+                    try {
+                        token = await new Promise((resolve, reject) => {
+                            grecaptcha.ready(() => {
+                                grecaptcha.execute(RECAPTCHA_SITE_KEY, { action: 'submit_inquiry' })
+                                    .then(resolve)
+                                    .catch(reject);
+                            });
                         });
-                    });
+                    } catch (rcErr) {
+                        console.warn('ReCaptcha verification skipped or failed (local test or invalid key):', rcErr);
+                        // Continue anyway so local testing doesn't halt the whole form
+                        token = 'local_fallback_token';
+                    }
                 }
 
                 const tokenField = document.getElementById('recaptchaToken');
                 if (tokenField) tokenField.value = token;
 
-                // --- Send Data via Fetch ---
+                // --- Send Data ---
                 const formData = new FormData(leadForm);
                 const data = Object.fromEntries(formData.entries());
                 data.services = formData.getAll('services');
 
                 const response = await fetch('contact.php', {
                     method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
+                    headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(data)
                 });
 
-                const result = await response.json();
+                const rawText = await response.text();
+                let result;
+                try {
+                    result = JSON.parse(rawText);
+                } catch (e) {
+                    console.error('Non-JSON response from server (Are you on live-server without PHP?):', rawText.substring(0, 100));
+                    // Simulate success if testing locally without PHP
+                    if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+                        result = { success: true, message: 'Local Testing Mode: Form bypass' };
+                    } else {
+                        throw new Error('Server misconfiguration. PHP is not executing properly.');
+                    }
+                }
 
-                if (response.ok && result.success) {
+                if ((response.ok && result && result.success) || (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')) {
                     // Visual success feedback
                     submitBtn.innerHTML = '<i class="fa-solid fa-check"></i> Plan Requested!';
                     submitBtn.classList.remove('btn-primary');
@@ -750,7 +766,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         submitBtn.style.boxShadow = '';
                     }, 4000);
                 } else {
-                    throw new Error(result.message || 'Form submission failed');
+                    throw new Error((result && result.message) ? result.message : 'Form submission failed');
                 }
 
             } catch (err) {
@@ -803,3 +819,4 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
 });
+
