@@ -893,6 +893,12 @@ img {
   margin-bottom: 2rem;
 }
 
+@media (max-width: 768px) {
+  .contact-grid {
+    gap: 2rem;
+  }
+}
+
 .contact-info {
   display: flex;
   flex-direction: column;
@@ -1439,6 +1445,24 @@ img {
     --section-padding: 4rem 0;
   }
 
+  .container {
+    padding: 0 1rem;
+  }
+
+  .section-title {
+    font-size: clamp(2rem, 8vw, 2.5rem);
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
+  }
+
   .mobile-menu-btn {
     display: block;
     z-index: 1001;
@@ -1449,8 +1473,8 @@ img {
     top: 0;
     right: -100%;
     width: 80%;
-    height: 100vh;
-    background: rgba(11, 12, 16, 0.95);
+    height: 100svh;
+    background: rgba(11, 12, 16, 0.98);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     display: flex;
@@ -1474,7 +1498,7 @@ img {
   }
 
   .nav-link {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
   }
 
   .site-header #nav-cta {
@@ -1678,6 +1702,16 @@ img {
 
   .services-grid-4 {
     grid-template-columns: 1fr;
+  }
+
+  .case-studies-grid {
+    grid-template-columns: 1fr;
+    padding: 2rem 0;
+  }
+
+  .lang-dropdown {
+    right: 0;
+    left: auto;
   }
 }
 

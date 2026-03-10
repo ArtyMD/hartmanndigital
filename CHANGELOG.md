@@ -49,3 +49,11 @@ This file tracks all modifications and updates made to the Antigravity project b
 ### Form Submission & ReCaptcha Fixes
 - Injected the missing "recaptchaToken" hidden input field into "index.html" so the ReCaptcha token actually sends to the backend.
 - Rewrote the ReCaptcha execution and Form Submission fetch in "script.js" to include robust try/catch blocks that automatically bypass ReCaptcha and PHP validation if testing is detected on "localhost" via "live-server", repairing the "JSON.parse" fatal error.
+
+### Mobile UI Optimization
+- Adjusted @media (max-width: 768px) queries in style.css to fix horizontal overflows on smaller screens.
+- Decreased .container padding from 2rem to 1rem on mobile to maximize screen usage for text/images.
+- Converted .main-nav height from 100vh to 100svh (Small Viewport Height) to prevent iOS Safari address bar cutoffs.
+- Re-anchored the .lang-dropdown to the right edge to stop language switcher horizontal scrolling.
+- Adjusted .case-studies-grid and .contact-grid templates to fallback to 1fr properly on phone widths.
+- Forced .hero-actions flexbox to stack .btn columns instead of row-wrapping them to fix overlap issues.
