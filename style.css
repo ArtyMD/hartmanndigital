@@ -46,6 +46,8 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 body {
@@ -56,6 +58,7 @@ body {
   color: var(--text-main);
   line-height: 1.6;
   overflow-x: hidden;
+  width: 100%;
   position: relative;
 }
 
@@ -154,8 +157,8 @@ img {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   z-index: -1;
   overflow: hidden;
   pointer-events: none;
@@ -1154,9 +1157,13 @@ img {
 
 .pricing-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
   align-items: start;
+}
+
+.services-grid-3 {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 
 .pricing-card {
@@ -1447,6 +1454,11 @@ img {
 
   .container {
     padding: 0 1rem;
+  }
+
+  /* Growth boosters wrapper fix */
+  .growth-boosters {
+    padding: 1.5rem !important;
   }
 
   .section-title {

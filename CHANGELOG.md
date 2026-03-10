@@ -57,3 +57,11 @@ This file tracks all modifications and updates made to the Antigravity project b
 - Re-anchored the .lang-dropdown to the right edge to stop language switcher horizontal scrolling.
 - Adjusted .case-studies-grid and .contact-grid templates to fallback to 1fr properly on phone widths.
 - Forced .hero-actions flexbox to stack .btn columns instead of row-wrapping them to fix overlap issues.
+
+### Mobile Horizontal Overflow Fix
+- Added overflow-x: hidden and width: 100% to both html and ody selectors in style.css.
+- Replaced 100vw/100vh on .background-effects with 100% to prevent scrollbar-width overflow.
+- Removed hardcoded inline style=grid-template-columns: repeat(3, 1fr) from the .pricing-grid in index.html so CSS breakpoints can properly override it on mobile.
+- Removed hardcoded inline style=grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) from .services-grid-3 and moved it to style.css.
+- Added @media (max-width: 768px) override for .growth-boosters to reduce its inline padding override.
+- Updated .pricing-grid base rule from epeat(4, 1fr) to epeat(3, 1fr) to match the 3-tier plan structure.
