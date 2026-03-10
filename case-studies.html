@@ -54,19 +54,29 @@
             </a>
             <nav id="main-nav" class="main-nav">
                 <ul class="nav-links">
-                    <li><a href="index.html#hero" class="nav-link">Home</a></li>
-                    <li><a href="index.html#services" class="nav-link">Expertise</a></li>
-                    <li><a href="index.html#pricing" class="nav-link">Pricing</a></li>
+                    <li><a href="index.html#hero" class="nav-link" data-i18n="nav_home">Home</a></li>
+                    <li><a href="index.html#services" class="nav-link" data-i18n="nav_expertise">Expertise</a></li>
+                    <li><a href="index.html#pricing" class="nav-link" data-i18n="nav_pricing">Pricing</a></li>
                     <li><a href="case-studies.html" class="nav-link active">Case Studies</a></li>
-                    <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+                    <li><a href="index.html#contact" class="nav-link" data-i18n="nav_contact">Contact</a></li>
                 </ul>
                 <div class="header-actions-mobile">
-                    <a href="index.html#contact" class="btn btn-primary btn-glow">Start Your Performance Plan</a>
+                    <a href="index.html#contact" class="btn btn-primary btn-glow" data-i18n="nav_cta">Start Your Performance Plan</a>
                 </div>
             </nav>
             <div class="header-actions">
-                <a href="index.html#contact" id="nav-cta" class="btn btn-primary btn-glow sticky-cta">Start Your
-                    Performance Plan</a>
+                <div class="lang-switcher">
+                    <button class="lang-btn" id="lang-btn">
+                        <span id="current-lang">EN</span> <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="lang-dropdown" id="lang-dropdown">
+                        <a href="#" data-lang="en">EN</a>
+                        <a href="#" data-lang="ru">RU</a>
+                        <a href="#" data-lang="ro">RO</a>
+                    </div>
+                </div>
+
+                <a href="index.html#contact" id="nav-cta" class="btn btn-primary btn-glow sticky-cta" data-i18n="nav_cta">Start Your Performance Plan</a>
                 <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Toggle Menu">
                     <i class="fa-solid fa-bars"></i>
                 </button>
@@ -316,7 +326,7 @@
                     <span class="logo-icon"><i class="fa-solid fa-chart-line"></i></span>
                     Hartmann<span class="gradient-text">Digital</span>
                 </a>
-                <p>© 2026 Hartmann Digital Agency. All rights reserved.</p>
+                <p data-i18n="footer_copyright">© 2026 Hartmann Digital Agency. All rights reserved.</p>
             </div>
         </div>
     </footer>

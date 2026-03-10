@@ -38,3 +38,10 @@ This file tracks all modifications and updates made to the Antigravity project b
 - Generated and added avicon.png across all HTML headers.
 - Rewrote the pricing block section in index.html to a 3-tier structure (Starter, Accelerator, Market Leader) based on the new framework.
 - Added 'Growth Boosters' section below the pricing grid for a la carte upsells.
+
+### UI & Multilingual Support (Latest Session)
+- Hid the 'Partner Logos' block from the homepage interface temporarily.
+- Renamed 'Upsells' to 'Addons' under the Growth Boosters pricing block.
+- Injected the Language Switcher logic into the Navbars of all 7 internal HTML pages.
+- Upgraded \script.js\ dictionary to store Russian & Romanian translations for the inner-page hero texts.
+- Mapped all internal pages with \data-i18n\ translation keys so language applies site-wide seamlessly.

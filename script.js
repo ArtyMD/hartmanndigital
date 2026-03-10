@@ -123,7 +123,22 @@ document.addEventListener('DOMContentLoaded', () => {
             price_custom_benefit: "For brands with unique challenges, complex technical stacks, or those needing high-level strategic guidance without full-time agency management.",
             price_custom_i1: "Tailored scope of work & project milestones",
             price_custom_i2: "Technical architecture & data ecosystem design",
-            price_custom_i3: "Strategic mentorship for in-house marketing teams"
+            price_custom_i3: "Strategic mentorship for in-house marketing teams",
+
+            ads_badge: "Paid Acquisition",
+            ads_title: 'High-ROAS <span class="gradient-text">Google & Meta Ads</span> Management',
+            ads_desc: "Stop wasting ad spend. We build elite, data-driven PPC campaigns powered by intent signals, creative science, and conversion-optimized funnels.",
+            trk_badge: "Technical Foundation",
+            trk_title: 'GTM & Server-Side Tracking <span class="gradient-text">100% Data Accuracy</span>',
+            trk_desc: "Fix post-iOS14 data loss with Meta CAPI and GTM Server-Side setups. Restore signal quality, feed algorithms better data, and scale faster.",
+            trk_cta: "Fix My Tracking",
+            email_badge: "Revenue Recovery",
+            email_title: 'Email Automation & <span class="gradient-text">Revenue Recovery</span>',
+            email_desc: "Build automated lead nurture and abandoned cart recovery funnels that maximize lifetime value. Turn every click — even the ones that don't convert immediately — into long-term revenue.",
+            local_badge: "Local Dominance",
+            local_title: 'Google Business Profile & <span class="gradient-text">Local SEO Domination</span>',
+            local_desc: "Be the first choice on Google Maps. We optimize your profile, build local authority, and automate review generation so you win the local search box every time.",
+
         },
         ru: {
             nav_home: "Главная",
@@ -270,7 +285,22 @@ document.addEventListener('DOMContentLoaded', () => {
             price_custom_benefit: "Для брендов с уникальными задачами, сложными техстеками или тех, кому нужно стратегическое руководство высокого уровня.",
             price_custom_i1: "Индивидуальный объем работ и этапы проекта",
             price_custom_i2: "Техническая архитектура и дизайн экосистемы данных",
-            price_custom_i3: "Стратегическое наставничество для внутренних команд"
+            price_custom_i3: "Стратегическое наставничество для внутренних команд",
+
+            ads_badge: "Платный трафик",
+            ads_title: 'Высокоэффективное управление <span class="gradient-text">Google & Meta Ads</span>',
+            ads_desc: "Хватит сливать бюджет. Мы создаем элитные PPC-кампании на основе данных и намерений покупателей, обеспечивая максимальный ROAS.",
+            trk_badge: "Технический фундамент",
+            trk_title: 'GTM & Server-Side Tracking <span class="gradient-text">100% точность данных</span>',
+            trk_desc: "Восстановите потерю данных после iOS14 с помощью Meta CAPI и серверного GTM. Кормите алгоритмы лучшими сигналами и масштабируйтесь быстрее.",
+            trk_cta: "Настроить трекинг",
+            email_badge: "Возврат выручки",
+            email_title: 'Email автоматизация & <span class="gradient-text">Возврат выручки</span>',
+            email_desc: "Создавайте автоматизированные воронки прогрева и возврата брошенных корзин. Превращайте каждый клик в долгосрочную прибыль.",
+            local_badge: "Локальное доминирование",
+            local_title: 'Google Business Profile & <span class="gradient-text">Локальное SEO</span>',
+            local_desc: "Станьте выбором №1 в Google Картах. Мы оптимизируем профиль, наращиваем локальный авторитет и автоматизируем сбор отзывов.",
+
         },
         ro: {
             nav_home: "Acasă",
@@ -417,7 +447,22 @@ document.addEventListener('DOMContentLoaded', () => {
             price_custom_benefit: "Pentru branduri cu provocări unice, stack-uri tehnice complexe sau cei care au nevoie de îndrumare strategică la nivel înalt.",
             price_custom_i1: "Scopul lucrării și etapele proiectului personalizate",
             price_custom_i2: "Arhitectură tehnică și design de ecosistem de date",
-            price_custom_i3: "Mentorat strategic pentru echipele interne de marketing"
+            price_custom_i3: "Mentorat strategic pentru echipele interne de marketing",
+
+            ads_badge: "Achiziție Plătită",
+            ads_title: 'Management <span class="gradient-text">Google & Meta Ads</span> cu ROAS Ridicat',
+            ads_desc: "Nu mai irosi bugetul. Construim campanii PPC de elită, bazate pe date și intenție de cumpărare, optimizate pentru conversii maxime.",
+            trk_badge: "Fundație Tehnică",
+            trk_title: 'GTM & Server-Side Tracking <span class="gradient-text">100% Acuratețea Datelor</span>',
+            trk_desc: "Remediază pierderea de date post-iOS14 cu setări Meta CAPI și GTM Server-Side. Alimentați algoritmii cu semnale precise.",
+            trk_cta: "Repară-mi Tracking-ul",
+            email_badge: "Recuperare Venituri",
+            email_title: 'Automatizare Email & <span class="gradient-text">Recuperare Venituri</span>',
+            email_desc: "Construiește funnel-uri automate pentru a transforma click-urile reci în vânzări și a crește fidelitatea pe termen lung.",
+            local_badge: "Dominanță Locală",
+            local_title: 'Google Business Profile & <span class="gradient-text">Dominanță SEO Locală</span>',
+            local_desc: "Fii prima alegere pe Google Maps. Optimizăm profilul și automatizăm recenziile pentru a câștiga piața locală.",
+
         }
     };
 
