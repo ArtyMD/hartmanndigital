@@ -90,3 +90,6 @@ epeat(3, 1fr) to match the 3-tier plan structure.
 - Injected the main Google Tag Manager `<script>` snippet high up in the `<head>` of all 8 HTML files.
 - Injected the fallback Google Tag Manager `<noscript>` iframe snippet immediately following the opening `<body>` tag on all 8 HTML files.
 - Automatically injected explicit `data-gtm` attributes across all 8 HTML files for navigation links (`nav-links nav-link`), CTA links (`.btn`, `.sticky-cta`, `.service-link`), logo links, and `<button>` elements to enable granular event tracking in Google Tag Manager.
+
+### Hide Social Links
+- Added `style="display: none;"` to the `.footer-social` block in `index.html` to temporarily hide the social media icons.
