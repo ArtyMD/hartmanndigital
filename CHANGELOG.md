@@ -64,7 +64,9 @@ This file tracks all modifications and updates made to the Antigravity project b
 - Removed hardcoded inline style=grid-template-columns: repeat(3, 1fr) from the .pricing-grid in index.html so CSS breakpoints can properly override it on mobile.
 - Removed hardcoded inline style=grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) from .services-grid-3 and moved it to style.css.
 - Added @media (max-width: 768px) override for .growth-boosters to reduce its inline padding override.
-- Updated .pricing-grid base rule from epeat(4, 1fr) to epeat(3, 1fr) to match the 3-tier plan structure.
+- Updated .pricing-grid base rule from 
+epeat(4, 1fr) to 
+epeat(3, 1fr) to match the 3-tier plan structure.
 
 ### Fix White Background on Inner Pages (Mobile)
 - Added ackground-color: #0b0c10 solid fallback before the animated gradient on ody in style.css. Without this, mobile browsers that don't run CSS animations (or that use prefers-reduced-motion) show a white page.
@@ -80,3 +82,6 @@ This file tracks all modifications and updates made to the Antigravity project b
 - Added z-index: 1002 and position: relative to the base .mobile-menu-btn rule.
 - Added pointer-events: none to .main-nav on mobile so the invisible off-screen panel never blocks clicks.
 - Added pointer-events: all to .main-nav.active to restore interactivity when the menu is open.
+
+### Fix Burger Menu Double-Click Bug on Inner Pages
+- Removed redundant inline `<script>` tags from 7 inner HTML pages (`ads.html`, `case-studies.html`, `email-automation.html`, `local-seo.html`, `privacy-policy.html`, `terms-of-service.html`, `tracking.html`) that were duplicating `script.js`'s mobile menu toggling logic and causing the menu to instantly close when opened.

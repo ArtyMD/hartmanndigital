@@ -125,23 +125,7 @@
     </footer>
 
     <script src="script.js"></script>
-    <script>
-        const header = document.getElementById('site-header');
-        window.addEventListener('scroll', () => { header.classList.toggle('scrolled', window.scrollY > 50); });
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        const mainNav = document.getElementById('main-nav');
-        if (mobileMenuBtn) {
-            mobileMenuBtn.addEventListener('click', () => {
-                mainNav.classList.toggle('active');
-                const icon = mobileMenuBtn.querySelector('i');
-                icon.classList.toggle('fa-bars'); icon.classList.toggle('fa-xmark');
-            });
-        }
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('appear'); observer.unobserve(e.target); } });
-        }, { threshold: 0.15 });
-        document.querySelectorAll('.fade-in, .fade-in-up').forEach(el => observer.observe(el));
-    </script>
 </body>
 
 </html>
+
