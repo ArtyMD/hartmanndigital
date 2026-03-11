@@ -85,3 +85,7 @@ epeat(3, 1fr) to match the 3-tier plan structure.
 
 ### Fix Burger Menu Double-Click Bug on Inner Pages
 - Removed redundant inline `<script>` tags from 7 inner HTML pages (`ads.html`, `case-studies.html`, `email-automation.html`, `local-seo.html`, `privacy-policy.html`, `terms-of-service.html`, `tracking.html`) that were duplicating `script.js`'s mobile menu toggling logic and causing the menu to instantly close when opened.
+
+### Google Tag Manager Integration
+- Injected the main Google Tag Manager `<script>` snippet high up in the `<head>` of all 8 HTML files.
+- Injected the fallback Google Tag Manager `<noscript>` iframe snippet immediately following the opening `<body>` tag on all 8 HTML files.
