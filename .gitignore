@@ -1,0 +1,37 @@
+# OS Metadata
+.DS_Store
+Thumbs.db
+
+# Private Credentials (PPC API keys, etc.)
+.env
+auth.json
+
+# Local Logs
+*.log
+npm-debug.log*
+
+# Large Library Folders
+node_modules/
+
+# AI Assistant Logs
+CHANGELOG.md
+
+# IDE & AI Agent folders
+.agent/
+.agents/
+.claude/
+.codebuddy/
+.codex/
+.continue/
+.cursor/
+.gemini/
+.github/prompts/
+.kiro/
+.opencode/
+.qoder/
+.roo/
+.trae/
+.windsurf/
+
+# Dependencies
+node_modules/

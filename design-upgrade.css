@@ -1,0 +1,530 @@
+/*=============================================================================
+  Hartmann Digital — Design Upgrade v3.0
+  Aesthetic: "Precision Dark" — Editorial-Utilitarian
+  DFII Score: 15/15 (Excellent)
+
+  Design Thesis:
+  Financial data terminals meet high-end agency craft.
+  Data-confident, not decorative. Every element earns its place.
+
+  Differentiation Anchor:
+  Sharp-edged numerics in monospace + electric blue/green data palette
+  against ruled horizontal lines — legible from a screenshot with logo removed.
+=============================================================================*/
+
+/* ─── FONT IMPORTS ─────────────────────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Mono:wght@400;500&family=Sora:wght@300;400;600;700;800&display=swap');
+
+/* ─── DESIGN SYSTEM OVERRIDES ───────────────────────────────────────────────── */
+:root {
+  /* Typography — OVERRIDE */
+  --font-heading: 'Space Grotesk', sans-serif;
+  --font-body:    'Sora', sans-serif;
+  --font-mono:    'DM Mono', monospace;
+
+  /* Color Story — Electric Blue + Data Terminal Green on near-black */
+  /* Dominant: deep blue-black  |  Accent: electric blue + terminal green  |  Neutral: slate */
+  --accent-primary:   #1a6eff;   /* electric blue — confident, not decorative */
+  --accent-green:     #00e5a0;   /* data terminal green — the memorable anchor */
+  --accent-blue:      #1a6eff;   /* override old indigo-blue */
+  --accent-purple:    #1a6eff;   /* kill the purple — keep blue as single accent */
+  --accent-cyan:      #00e5a0;   /* repurpose cyan → terminal green */
+  --accent-violet:    #4d9fff;   /* soft fallback */
+
+  /* Gradients — OVERRIDE */
+  --gradient-primary:   linear-gradient(135deg, #1a6eff 0%, #00e5a0 100%);
+  --gradient-secondary: linear-gradient(135deg, #00e5a0 0%, #1a6eff 100%);
+  --gradient-warm:      linear-gradient(135deg, #f59e0b 0%, #ef4444 100%);
+  --gradient-border:    linear-gradient(135deg, rgba(26,110,255,0.4), rgba(0,229,160,0.4));
+
+  /* Background — deeper, truer black */
+  --bg-deep:        #04050d;
+  --bg-color:       #060810;
+  --bg-color-light: #0c0e1c;
+  --bg-surface:     #10122a;
+
+  /* Glass — slightly more opaque for editorial feel */
+  --glass-bg:           rgba(255,255,255,0.025);
+  --glass-bg-hover:     rgba(26,110,255,0.05);
+  --glass-border:       rgba(255,255,255,0.055);
+  --glass-border-hover: rgba(26,110,255,0.35);
+
+  /* Layout tokens */
+  --radius-sm:  4px;   /* sharper corners — data terminal feel */
+  --radius-md:  8px;
+  --radius-lg:  12px;
+  --radius-xl:  16px;
+
+  /* Rule line — the editorial signature */
+  --rule-color: rgba(26,110,255,0.2);
+}
+
+/* ─── GRAIN TEXTURE OVERLAY ─────────────────────────────────────────────────── */
+/* Adds physical depth — distinguishes from flat "AI UI" */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-size: 128px 128px;
+}
+
+/* ─── BACKGROUND ORBS — dialed back, more deliberate ─────────────────────── */
+.orb-1 {
+  background: radial-gradient(circle, rgba(26,110,255,0.6), transparent 65%);
+  opacity: 0.15;
+  width: 45vw;
+  height: 45vw;
+}
+.orb-2 {
+  background: radial-gradient(circle, rgba(0,229,160,0.4), transparent 65%);
+  opacity: 0.10;
+  width: 50vw;
+  height: 50vw;
+}
+.orb-3 {
+  background: radial-gradient(circle, rgba(26,110,255,0.3), transparent 65%);
+  opacity: 0.08;
+}
+
+/* ─── GLASS CARDS — sharper, editorial ────────────────────────────────────── */
+.glass-card {
+  border-radius: var(--radius-lg) !important;
+  border: 1px solid var(--glass-border) !important;
+  background: var(--glass-bg) !important;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease !important;
+}
+
+.glass-card:hover {
+  border-color: var(--glass-border-hover) !important;
+  box-shadow: 0 0 0 1px rgba(26,110,255,0.1), 0 24px 60px rgba(0,0,0,0.6) !important;
+  transform: translateY(-4px) !important;
+}
+
+/* ─── GRADIENT TEXT — updated to new palette ─────────────────────────────── */
+.gradient-text {
+  background: var(--gradient-primary) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  background-clip: text !important;
+}
+
+/* ─── SECTION TAG — Replace pill with editorial rule marker ──────────────── */
+/* Before: rounded pill badge  |  After: left-border label — editorial, stark */
+.section-tag {
+  background: transparent !important;
+  border: none !important;
+  border-left: 2px solid var(--accent-primary) !important;
+  border-radius: 0 !important;
+  padding: 0.2rem 0 0.2rem 0.85rem !important;
+  font-family: var(--font-mono) !important;
+  font-size: 0.7rem !important;
+  letter-spacing: 0.18em !important;
+  color: var(--accent-primary) !important;
+  opacity: 0.9;
+  margin-bottom: 1.5rem !important;
+}
+
+/* ─── TYPOGRAPHY ─────────────────────────────────────────────────────────────*/
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading) !important;
+  letter-spacing: -0.025em;
+}
+
+.section-title {
+  font-family: var(--font-heading) !important;
+  letter-spacing: -0.03em;
+}
+
+/* ─── HERO SECTION ───────────────────────────────────────────────────────────*/
+/* The badge — strip the pill, use mono inline label */
+.badge {
+  background: transparent !important;
+  border: none !important;
+  border-bottom: 1px solid var(--rule-color) !important;
+  border-radius: 0 !important;
+  padding: 0 0 0.65rem 0 !important;
+  font-family: var(--font-mono) !important;
+  font-size: 0.7rem !important;
+  letter-spacing: 0.2em !important;
+  color: var(--accent-green) !important;
+  width: fit-content;
+}
+
+/* Pulse dot — green to match new accent */
+.pulse-dot {
+  background: var(--accent-green) !important;
+  box-shadow: 0 0 8px var(--accent-green) !important;
+}
+
+@keyframes pulseDot {
+  0%   { transform: scale(0.9); box-shadow: 0 0 0 0 rgba(0,229,160,0.7); }
+  70%  { transform: scale(1);   box-shadow: 0 0 0 8px rgba(0,229,160,0); }
+  100% { transform: scale(0.9); box-shadow: 0 0 0 0 rgba(0,229,160,0); }
+}
+
+/* Hero title — larger, tighter */
+.hero-title {
+  font-size: clamp(3rem, 5.5vw, 5rem) !important;
+  letter-spacing: -0.045em !important;
+  line-height: 1.03 !important;
+}
+
+/* ─── STATS ROW — monospace numeric anchors ───────────────────────────────── */
+/* The memorable anchor: oversized mono numbers like a trading terminal */
+.stat-number {
+  font-family: var(--font-mono) !important;
+  font-size: 2.4rem !important;
+  font-weight: 500 !important;
+  letter-spacing: -0.02em !important;
+  background: none !important;
+  -webkit-text-fill-color: unset !important;
+  -webkit-background-clip: unset !important;
+  background-clip: unset !important;
+  color: var(--accent-green) !important;
+  margin-bottom: 0.3rem !important;
+}
+
+.stat-label {
+  font-family: var(--font-mono) !important;
+  font-size: 0.65rem !important;
+  color: var(--text-subtle) !important;
+  letter-spacing: 0.15em !important;
+}
+
+.stats-row {
+  border-top: 1px solid var(--rule-color) !important;
+  padding-top: 2rem !important;
+}
+
+.stat-item:not(:last-child)::after {
+  background: var(--rule-color) !important;
+}
+
+/* ─── BUTTONS — sharp, confident, not rounded pill-SaaS ─────────────────────*/
+/* Kill the pill radius — use sharp corners instead */
+.btn {
+  border-radius: var(--radius-sm) !important;
+  font-family: var(--font-heading) !important;
+  letter-spacing: 0.01em !important;
+  font-size: 0.9rem !important;
+}
+
+.btn-primary {
+  background: var(--accent-primary) !important;
+  background-image: none !important;
+  box-shadow: 0 0 28px rgba(26,110,255,0.3) !important;
+}
+
+.btn-primary:hover {
+  background: #2879ff !important;
+  box-shadow: 0 0 40px rgba(26,110,255,0.5) !important;
+}
+
+.btn-glow {
+  box-shadow: 0 0 24px rgba(26,110,255,0.35) !important;
+}
+.btn-glow:hover {
+  box-shadow: 0 0 40px rgba(26,110,255,0.6) !important;
+}
+
+.btn-outline {
+  border-radius: var(--radius-sm) !important;
+  border: 1px solid rgba(26,110,255,0.3) !important;
+  color: var(--accent-primary) !important;
+}
+
+.btn-outline:hover {
+  background: rgba(26,110,255,0.08) !important;
+  border-color: var(--accent-primary) !important;
+  color: #fff !important;
+}
+
+/* Sticky nav CTA — also sharp */
+.sticky-cta {
+  border-radius: var(--radius-sm) !important;
+}
+
+/* ─── HEADER / NAVIGATION ────────────────────────────────────────────────────── */
+.logo {
+  font-family: var(--font-heading) !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.04em !important;
+}
+
+/* Nav links — mono weight, tab-style underline on active */
+.nav-link {
+  font-family: var(--font-body) !important;
+  font-size: 0.85rem !important;
+  border-radius: 0 !important;
+  padding: 0.4rem 0.75rem !important;
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 1px;
+  background: var(--accent-primary);
+  transition: width 0.25s ease;
+}
+
+.nav-link:hover {
+  background: transparent !important;
+  color: var(--text-main) !important;
+}
+
+.nav-link:hover::after {
+  width: 70%;
+}
+
+.nav-link.active::after {
+  width: 70%;
+}
+
+/* ─── SERVICE CARDS — numbered auditor-list feel ─────────────────────────── */
+/* Add ordinal number top-left — feels like a professional audit checklist */
+.services-grid .service-card {
+  position: relative;
+  counter-increment: service-counter;
+}
+
+.services-grid {
+  counter-reset: service-counter;
+}
+
+.service-card::before {
+  content: '0' counter(service-counter);
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--accent-primary);
+  opacity: 0.5;
+  letter-spacing: 0.1em;
+  position: absolute;
+  top: 1.5rem;
+  right: 1.75rem;
+}
+
+/* Service icon container — remove colored bg, use line accent instead */
+.service-icon {
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  border-left: 2px solid var(--accent-primary) !important;
+  padding-left: 0.65rem !important;
+  display: flex !important;
+  align-items: center !important;
+  margin-bottom: 1.5rem !important;
+  font-size: 1.1rem !important;
+  color: var(--accent-primary) !important;
+}
+
+/* Override icon-specific colors */
+.icon-google, .icon-gtm, .icon-local, .icon-email {
+  color: var(--accent-primary) !important;
+  background: transparent !important;
+}
+
+.service-name {
+  font-family: var(--font-heading) !important;
+  font-size: 1.15rem !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.02em !important;
+  margin-bottom: 0.75rem !important;
+}
+
+/* Service features — clean tick list */
+.service-features li {
+  font-size: 0.82rem !important;
+  color: var(--text-muted) !important;
+  padding: 0.4rem 0 !important;
+  border-bottom: 1px solid rgba(255,255,255,0.04) !important;
+}
+
+.service-features li:last-child {
+  border-bottom: none !important;
+}
+
+.service-features .fa-check {
+  color: var(--accent-green) !important;
+  font-size: 0.7rem !important;
+}
+
+/* ─── PROCESS SECTION ─────────────────────────────────────────────────────── */
+.process-step {
+  border-left: 2px solid rgba(255,255,255,0.05) !important;
+  border-radius: 0 !important;
+  padding-left: 1.5rem !important;
+  transition: border-color 0.25s ease !important;
+}
+
+.process-step.active, .process-step:hover {
+  border-left-color: var(--accent-primary) !important;
+}
+
+.step-number {
+  font-family: var(--font-mono) !important;
+  color: var(--accent-primary) !important;
+  font-size: 0.7rem !important;
+  letter-spacing: 0.12em !important;
+}
+
+/* ─── PRICING — monospace price anchor ───────────────────────────────────── */
+.price .amount {
+  font-family: var(--font-mono) !important;
+  color: var(--text-main) !important;
+}
+
+.price .currency,
+.price .period {
+  font-family: var(--font-mono) !important;
+  font-size: 0.85rem !important;
+  color: var(--text-muted) !important;
+}
+
+/* Recommended card — electric blue top border instead of generic glow */
+.pricing-card.recommended {
+  border-top: 2px solid var(--accent-primary) !important;
+}
+
+.popular-badge {
+  font-family: var(--font-mono) !important;
+  font-size: 0.62rem !important;
+  letter-spacing: 0.18em !important;
+  background: rgba(26,110,255,0.12) !important;
+  border: 1px solid rgba(26,110,255,0.3) !important;
+  border-radius: var(--radius-sm) !important;
+  color: var(--accent-primary) !important;
+}
+
+.pricing-features .fa-check {
+  color: var(--accent-green) !important;
+}
+
+/* ─── TESTIMONIALS ────────────────────────────────────────────────────────── */
+/* Carousel dots — replace circles with mono dashes */
+.carousel-dots .dot {
+  border-radius: var(--radius-sm) !important;
+  background: rgba(255,255,255,0.15) !important;
+  width: 20px !important;
+  height: 3px !important;
+}
+
+.carousel-dots .dot.active {
+  background: var(--accent-primary) !important;
+  width: 40px !important;
+}
+
+/* Stars */
+.rating .fa-star { color: var(--accent-green) !important; }
+
+/* ─── FOOTER ─────────────────────────────────────────────────────────────────*/
+footer {
+  border-top: 1px solid var(--rule-color) !important;
+}
+
+/* ─── HORIZONTAL RULE UTILITY ─────────────────────────────────────────────── */
+/* Ruled lines as compositional dividers — the editorial signature */
+.rule-divider {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--rule-color) 30%, var(--rule-color) 70%, transparent);
+  margin: 4rem 0;
+}
+
+/* ─── SCROLLED HEADER ─────────────────────────────────────────────────────── */
+.site-header.scrolled {
+  border-bottom: 1px solid var(--rule-color) !important;
+  background: rgba(6,8,16,0.88) !important;
+}
+
+/* ─── LANG DROPDOWN ──────────────────────────────────────────────────────── */
+.lang-dropdown {
+  border-radius: var(--radius-sm) !important;
+}
+.lang-dropdown a.active {
+  background: rgba(26,110,255,0.15) !important;
+  color: var(--accent-primary) !important;
+}
+.lang-btn { border-radius: var(--radius-sm) !important; }
+
+/* ─── FLOATING BADGES (Hero visual) ─────────────────────────────────────── */
+.floating-badge {
+  border-radius: var(--radius-sm) !important;
+  font-family: var(--font-mono) !important;
+  font-size: 0.75rem !important;
+  border: 1px solid rgba(26,110,255,0.2) !important;
+}
+
+/* ─── FORM ELEMENTS ──────────────────────────────────────────────────────── */
+input, textarea, select {
+  border-radius: var(--radius-sm) !important;
+  font-family: var(--font-body) !important;
+  border-color: rgba(26,110,255,0.2) !important;
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: var(--accent-primary) !important;
+  box-shadow: 0 0 0 3px rgba(26,110,255,0.12) !important;
+  outline: none !important;
+}
+
+/* ─── ENTRANCE ANIMATIONS — single strong sequence ────────────────────────── */
+/* Hero entrance: content slides up, visual fades in from right */
+@keyframes heroSlideUp {
+  from { opacity: 0; transform: translateY(32px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes heroFadeRight {
+  from { opacity: 0; transform: translateX(24px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+.hero-content .badge       { animation: heroSlideUp 0.7s cubic-bezier(0.16,1,0.3,1) 0.1s both; }
+.hero-content .hero-title  { animation: heroSlideUp 0.7s cubic-bezier(0.16,1,0.3,1) 0.22s both; }
+.hero-content .hero-description { animation: heroSlideUp 0.7s cubic-bezier(0.16,1,0.3,1) 0.34s both; }
+.hero-content .hero-actions { animation: heroSlideUp 0.7s cubic-bezier(0.16,1,0.3,1) 0.44s both; }
+.hero-content .stats-row   { animation: heroSlideUp 0.7s cubic-bezier(0.16,1,0.3,1) 0.54s both; }
+.hero-visual               { animation: heroFadeRight 0.9s cubic-bezier(0.16,1,0.3,1) 0.4s both; }
+
+/* ─── ACCENT LINE DECORATION on H2 headings ─────────────────────────────── */
+/* Adds a thin colored line below section titles — the editorial rule */
+.section-header .section-title::after {
+  content: '';
+  display: block;
+  width: 2.5rem;
+  height: 2px;
+  background: var(--accent-primary);
+  margin-top: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.6;
+}
+
+.section-header.text-center .section-title::after {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ─── SECTION CONTAINER RULE (visual rhythm) ────────────────────────────── */
+.services-section,
+.process-section,
+.testimonials-section,
+.pricing-section {
+  border-top: 1px solid rgba(255,255,255,0.03);
+}
+
+/* ─── CONTACT FORM AREA ─────────────────────────────────────────────────── */
+.contact-section .glass-card,
+#contact .glass-card {
+  border-top: 2px solid var(--accent-primary) !important;
+}

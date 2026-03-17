@@ -1,0 +1,28 @@
+User-agent: *
+Allow: /
+Allow: /assets/
+Allow: /style.css
+Allow: /script.js
+
+# Disallow common bots/crawlers from accessing unnecessary backend scripts or private directories
+Disallow: /contact.php
+Disallow: /.git/
+Disallow: /node_modules/
+Disallow: /*.yml$
+Disallow: /*.md$
+
+# Bad bots (examples - you can add more specific malicious bots here)
+User-agent: BLEXBot
+Disallow: /
+User-agent: SemrushBot
+Disallow: /
+User-agent: AhrefsBot
+Disallow: /
+User-agent: MJ12bot
+Disallow: /
+User-agent: DotBot
+Disallow: /
+User-agent: PetalBot
+Disallow: /
+
+Sitemap: https://hartmann-digital.com/sitemap.xml
