@@ -13,50 +13,49 @@
 =============================================================================*/
 
 /* ─── FONT IMPORTS ─────────────────────────────────────────────────────────── */
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Mono:wght@400;500&family=Sora:wght@300;400;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=DM+Mono:wght@400;500&family=Exo+2:wght@300;400;500;600;700;800&display=swap');
 
 /* ─── DESIGN SYSTEM OVERRIDES ───────────────────────────────────────────────── */
 :root {
   /* Typography — OVERRIDE */
-  --font-heading: 'Space Grotesk', sans-serif;
-  --font-body:    'Sora', sans-serif;
+  --font-heading: 'Orbitron', sans-serif;
+  --font-body:    'Exo 2', sans-serif;
   --font-mono:    'DM Mono', monospace;
 
-  /* Color Story — Electric Blue + Data Terminal Green on near-black */
-  /* Dominant: deep blue-black  |  Accent: electric blue + terminal green  |  Neutral: slate */
-  --accent-primary:   #1a6eff;   /* electric blue — confident, not decorative */
-  --accent-green:     #00e5a0;   /* data terminal green — the memorable anchor */
-  --accent-blue:      #1a6eff;   /* override old indigo-blue */
-  --accent-purple:    #1a6eff;   /* kill the purple — keep blue as single accent */
-  --accent-cyan:      #00e5a0;   /* repurpose cyan → terminal green */
-  --accent-violet:    #4d9fff;   /* soft fallback */
+  /* Color Story — Motion-Driven AI Personalization */
+  --accent-primary:   #EC4899;   /* Vibrant Pink */
+  --accent-green:     #06B6D4;   /* Cyan */
+  --accent-blue:      #06B6D4;
+  --accent-purple:    #EC4899;
+  --accent-cyan:      #06B6D4;
+  --accent-violet:    #F472B6;
 
   /* Gradients — OVERRIDE */
-  --gradient-primary:   linear-gradient(135deg, #1a6eff 0%, #00e5a0 100%);
-  --gradient-secondary: linear-gradient(135deg, #00e5a0 0%, #1a6eff 100%);
-  --gradient-warm:      linear-gradient(135deg, #f59e0b 0%, #ef4444 100%);
-  --gradient-border:    linear-gradient(135deg, rgba(26,110,255,0.4), rgba(0,229,160,0.4));
+  --gradient-primary:   linear-gradient(135deg, #EC4899 0%, #06B6D4 100%);
+  --gradient-secondary: linear-gradient(135deg, #06B6D4 0%, #EC4899 100%);
+  --gradient-warm:      linear-gradient(135deg, #EC4899 0%, #F472B6 100%);
+  --gradient-border:    linear-gradient(135deg, rgba(236,72,153,0.4), rgba(6,182,212,0.4));
 
-  /* Background — deeper, truer black */
-  --bg-deep:        #04050d;
-  --bg-color:       #060810;
-  --bg-color-light: #0c0e1c;
-  --bg-surface:     #10122a;
+  /* Background — deep purple-black */
+  --bg-deep:        #0a0410;
+  --bg-color:       #0f081c;
+  --bg-color-light: #160d2b;
+  --bg-surface:     #1d1238;
 
-  /* Glass — slightly more opaque for editorial feel */
-  --glass-bg:           rgba(255,255,255,0.025);
-  --glass-bg-hover:     rgba(26,110,255,0.05);
-  --glass-border:       rgba(255,255,255,0.055);
-  --glass-border-hover: rgba(26,110,255,0.35);
+  /* Glass */
+  --glass-bg:           rgba(255,255,255,0.03);
+  --glass-bg-hover:     rgba(236,72,153,0.08); /* More vibrant hover */
+  --glass-border:       rgba(255,255,255,0.08);
+  --glass-border-hover: rgba(236,72,153,0.5);
 
   /* Layout tokens */
-  --radius-sm:  4px;   /* sharper corners — data terminal feel */
-  --radius-md:  8px;
-  --radius-lg:  12px;
-  --radius-xl:  16px;
+  --radius-sm:  8px;
+  --radius-md:  12px;
+  --radius-lg:  16px;
+  --radius-xl:  24px;
 
-  /* Rule line — the editorial signature */
-  --rule-color: rgba(26,110,255,0.2);
+  /* Rule line */
+  --rule-color: rgba(236,72,153,0.3);
 }
 
 /* ─── GRAIN TEXTURE OVERLAY ─────────────────────────────────────────────────── */
@@ -74,20 +73,20 @@ body::before {
 
 /* ─── BACKGROUND ORBS — dialed back, more deliberate ─────────────────────── */
 .orb-1 {
-  background: radial-gradient(circle, rgba(26,110,255,0.6), transparent 65%);
-  opacity: 0.15;
+  background: radial-gradient(circle, rgba(236,72,153,0.6), transparent 65%);
+  opacity: 0.18;
   width: 45vw;
   height: 45vw;
 }
 .orb-2 {
-  background: radial-gradient(circle, rgba(0,229,160,0.4), transparent 65%);
-  opacity: 0.10;
+  background: radial-gradient(circle, rgba(6,182,212,0.4), transparent 65%);
+  opacity: 0.15;
   width: 50vw;
   height: 50vw;
 }
 .orb-3 {
-  background: radial-gradient(circle, rgba(26,110,255,0.3), transparent 65%);
-  opacity: 0.08;
+  background: radial-gradient(circle, rgba(244,114,182,0.3), transparent 65%);
+  opacity: 0.12;
 }
 
 /* ─── GLASS CARDS — sharper, editorial ────────────────────────────────────── */
@@ -100,8 +99,8 @@ body::before {
 
 .glass-card:hover {
   border-color: var(--glass-border-hover) !important;
-  box-shadow: 0 0 0 1px rgba(26,110,255,0.1), 0 24px 60px rgba(0,0,0,0.6) !important;
-  transform: translateY(-4px) !important;
+  box-shadow: 0 0 0 1px rgba(236,72,153,0.15), 0 24px 60px rgba(0,0,0,0.6) !important;
+  transform: translateY(-8px) scale(1.02) !important; /* Made animation more dynamic */
 }
 
 /* ─── GRADIENT TEXT — updated to new palette ─────────────────────────────── */
@@ -161,9 +160,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @keyframes pulseDot {
-  0%   { transform: scale(0.9); box-shadow: 0 0 0 0 rgba(0,229,160,0.7); }
-  70%  { transform: scale(1);   box-shadow: 0 0 0 8px rgba(0,229,160,0); }
-  100% { transform: scale(0.9); box-shadow: 0 0 0 0 rgba(0,229,160,0); }
+  0%   { transform: scale(0.9); box-shadow: 0 0 0 0 rgba(6,182,212,0.7); }
+  70%  { transform: scale(1.1);   box-shadow: 0 0 0 12px rgba(6,182,212,0); }
+  100% { transform: scale(0.9); box-shadow: 0 0 0 0 rgba(6,182,212,0); }
 }
 
 /* Hero title — larger, tighter */
@@ -216,31 +215,34 @@ h1, h2, h3, h4, h5, h6 {
 .btn-primary {
   background: var(--accent-primary) !important;
   background-image: none !important;
-  box-shadow: 0 0 28px rgba(26,110,255,0.3) !important;
+  box-shadow: 0 0 28px rgba(236,72,153,0.3) !important;
 }
 
 .btn-primary:hover {
-  background: #2879ff !important;
-  box-shadow: 0 0 40px rgba(26,110,255,0.5) !important;
+  background: #db2777 !important;
+  box-shadow: 0 0 40px rgba(236,72,153,0.6) !important;
+  transform: translateY(-2px);
 }
 
 .btn-glow {
-  box-shadow: 0 0 24px rgba(26,110,255,0.35) !important;
+  box-shadow: 0 0 24px rgba(236,72,153,0.35) !important;
 }
 .btn-glow:hover {
-  box-shadow: 0 0 40px rgba(26,110,255,0.6) !important;
+  box-shadow: 0 0 40px rgba(236,72,153,0.65) !important;
 }
 
 .btn-outline {
   border-radius: var(--radius-sm) !important;
-  border: 1px solid rgba(26,110,255,0.3) !important;
+  border: 1px solid rgba(236,72,153,0.4) !important;
   color: var(--accent-primary) !important;
+  transition: all 0.3s ease !important;
 }
 
 .btn-outline:hover {
-  background: rgba(26,110,255,0.08) !important;
+  background: rgba(236,72,153,0.1) !important;
   border-color: var(--accent-primary) !important;
   color: #fff !important;
+  transform: translateY(-2px);
 }
 
 /* Sticky nav CTA — also sharp */
@@ -399,8 +401,8 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-mono) !important;
   font-size: 0.62rem !important;
   letter-spacing: 0.18em !important;
-  background: rgba(26,110,255,0.12) !important;
-  border: 1px solid rgba(26,110,255,0.3) !important;
+  background: rgba(236,72,153,0.15) !important;
+  border: 1px solid rgba(236,72,153,0.4) !important;
   border-radius: var(--radius-sm) !important;
   color: var(--accent-primary) !important;
 }
@@ -451,7 +453,7 @@ footer {
   border-radius: var(--radius-sm) !important;
 }
 .lang-dropdown a.active {
-  background: rgba(26,110,255,0.15) !important;
+  background: rgba(236,72,153,0.15) !important;
   color: var(--accent-primary) !important;
 }
 .lang-btn { border-radius: var(--radius-sm) !important; }
@@ -461,7 +463,7 @@ footer {
   border-radius: var(--radius-sm) !important;
   font-family: var(--font-mono) !important;
   font-size: 0.75rem !important;
-  border: 1px solid rgba(26,110,255,0.2) !important;
+  border: 1px solid rgba(236,72,153,0.3) !important;
 }
 
 /* ─── FORM ELEMENTS ──────────────────────────────────────────────────────── */
